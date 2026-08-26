@@ -58,30 +58,40 @@ Some examples of user stories include:
 - E-commerce site: as a shopper, I want to add items to my cart so that I can purchase multiple products at once
 - Mobile application: as a user, I want to receive push notifications for important updates so that I stay informed when I'm not using the app
 
-As mentioned, note that they are short and to the point,
-and each encapsulate a single aspect.
+As mentioned, note that they are short and to the point, and each encapsulate a single aspect.
+
+::: challenge
+
+### User Story Activity
+
+You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
+
+Spend a few minutes to write down some user stories.
+
+::: solution
+
+There's no right or wrong answers, but here are some examples.
+
+- As a *researcher* I want *to train the model* so that *I can validate my ideas*.
+- As a *researcher* I want *to test model checkpoints* so that *I can explore progress when training*.
+- As a *researcher* I want *to be able to compute inference metrics on test data* so that *I can compare performance with other competing image classification models*.
+- As a *research collaborator* I want *to install and run the software* so that *I can use the model to classify images from my research.*
+- As a *member of the public* I want *to interactively classify objects* so that *I can understand the potential of the technology,*
+
+:::
+
+:::
 
 ## Requirements
 
-In general, a requirement is a *capability or condition that must be met for software to solve a problem or address a need*.
-They form the foundation of our project and drive what will be developed,
-so if we do not properly explore and understand what is required, the software will not be suitable for it's intended purpose.
+In general, a requirement is a *capability or condition that must be met for software to solve a problem or address a need*. They form the foundation of our project and drive what will be developed, so if we do not properly explore and understand what is required, the software will not be suitable for it's intended purpose.
 
-Whilst user stories focus purely on the user perspective,
-requirements concentrate on what technically needs to change.
-For this reason, it's common to develop user stories first (to understand the user),
-then from those stories,
-derive requirements (to understand what needs to be built).
-Requirements typically address technical aspects of software functionality and features that are needed to complete a user story,
-and are more numerous than the collection of user stories.
-Therefore, each user story is often addressed by more than one requirement.
+Whilst user stories focus purely on the user perspective, requirements concentrate on what technically needs to change. For this reason, it's common to develop user stories first (to understand the user), then from those stories, derive requirements (to understand what needs to be built). Requirements typically address technical aspects of software functionality and features that are needed to complete a user story, and are more numerous than the collection of user stories. Therefore, each user story is often addressed by more than one requirement.
 
-There is repeated evidence that most errors aren't actually introduced during the software development stage,
-but during requirements analysis and design.
+There is repeated evidence that most errors aren't actually introduced during the software development stage, but during requirements analysis and design.
 For example, [one analysis](https://doi.org/10.1109/ISRE.1993.324825) of the software errors uncovered during integration and testing and the Voyager (1977) and Galileo (1989) probes discovered that 79% of these errors were due to a poor understanding of requirements.
 
-However, it is unlikely that we will be able to determine all of the requirements correctly and completely upfront.
-In practice, very often requirements may need be flexible to some extent and may change as the project evolves, so we need to ensure we are able to accommodate any agreed changes.
+However, it is unlikely that we will be able to determine all of the requirements correctly and completely upfront. In practice, very often requirements may need be flexible to some extent and may change as the project evolves, so we need to ensure we are able to accommodate any agreed changes.
 
 ### Requirements are More than just Features
 
@@ -119,55 +129,71 @@ Some typical classes of non-functional categories include:
 
 A more comprehensive list can be found [on Wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement#Examples).
 
+::: spoiler
+
+#### Mars Climate Orbiter
+
+The [Mars Climate Orbiter](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter) was a 1998 NASA mission to study the climate and atmosphere of Mars.  The mission was famously lost during the Mars orbit insertion manoeuvre when the software for computing the impulse of thrust from the orbiters engine, developed by Lockheed Martin, gave results in US customary units of pounds-force seconds, but the NASA software expected inputs in SI units of newton-seconds.  The result was incorrect values fed into the trajectory computation system and loss of the orbiter.
+
+Lockheed Martin's software did not adhere to the requirements document which specified SI outputs, but this discrepancy was also not caught by NASA.
+
+It isn't sufficient to have requirements; they must also be *verified* and *validated*.
+
+:::
 
 ### Capturing Requirements in a Product Backlog
 
-A *product backlog* is a prioritised list of functionality that a product should contain;
-essentially, a list of work for the development team.
-It represents everything that might be needed in the product and is the single source of truth for all work.
-They include requirement-related aspects such as features, bugs, improvements, and non-functional requirements,
-but also any other supporting tasks such as any needed research (also known as *spikes*),
-and other implementation-related tasks (like cleaning up/refactoring code).
+A *product backlog* is a prioritised list of functionality that a product should contain; essentially, a list of work for the development team. It represents everything that might be needed in the product and is the single source of truth for all work. They include requirement-related aspects such as features, bugs, improvements, and non-functional requirements, but also any other supporting tasks such as any needed research (also known as *spikes*), and other implementation-related tasks (like cleaning up/refactoring code).
 
-A product backlog is owned by the *product owner* (the client),
-and is dynamic, in that it evolves as the needs of the product evolves.
-Regular backlog refinement sessions throughout a project ensure items are updated, estimated,
-re-prioritised if necessary, and ready for upcoming sprints.
+A product backlog is owned by the *product owner* (the client), and is dynamic, in that it evolves as the needs of the product evolves. Regular backlog refinement sessions throughout a project ensure items are updated, estimated, re-prioritised if necessary, and ready for upcoming sprints.
+
+::: challenge
+
+### Requirements Activity
+
+You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
+
+Look at some of the user stories from the previous challenge, and think about some requirements. Also consider non-functional requirements that may be implicit in the
+
+::: solution
+
+There's no right or wrong answers, but here are some examples.
+
+Consider two possible user stories and how they impact requirements:
+
+- As a *researcher* I want *to train the model* so that *I can validate my ideas*.
+- As a *researcher* I want *to test model checkpoints* so that *I can explore progress when training*.
+
+You might get requirements like the following for training the model:
+- the software must be able to create an untrained model of the experimental architecture
+- the software must be able to train the model from scratch
+- the software must be able to save checkpoints at user-specified intervals
+- the software must be able to resume training from a saved checkpoint
+- the software must be able to report progress in terms of both loss and user-specified metrics
+
+You might also get non-functional requirements, such as:
+- the software must support replication (eg. by setting random number seeds)
+- the software must have unit tests
+- the software must be written in Python using the Pytorch library
+
+:::
+
+:::
 
 ## Estimation
 
-Once we have an initial set of requirements captured,
-we need to understand their importance in relation to each other:
-essentially we need to prioritise them.
+Once we have an initial set of requirements captured, we need to understand their importance in relation to each other: essentially we need to prioritise them.
 
-But before we can prioritise our requirements,
-there are some things we need to find out.
+But before we can prioritise our requirements, there are some things we need to find out.
 
 Firstly, we need to know:
 
-- *The period of time we have to resolve these requirements* -
-  e.g. before the next software release, pivotal demonstration,
-  or other deadlines requiring their completion.
-- *How much overall effort we have available* -
-  i.e. who will be involved and how much of their time we will have during this period.
+- *The period of time we have to resolve these requirements* - e.g. before the next software release, pivotal demonstration, or other deadlines requiring their completion.
+- *How much overall effort we have available* - i.e. who will be involved and how much of their time we will have during this period.
 
-We also need estimates for how long each requirement will take to resolve,
-since it's difficult to meaningfully prioritise requirements without
-knowing what the effort tradeoffs will be.
-Even if we know how important each requirement is,
-how would we even know if completing the project is possible?
-Or if we do not know how long it will take
-to deliver those requirements we deem to be critical to the success of a project,
-how can we know if we can include other less important ones?
+We also need estimates for how long each requirement will take to resolve, since it's difficult to meaningfully prioritise requirements without knowing what the effort tradeoffs will be. Even if we know how important each requirement is, how would we even know if completing the project is possible? Or if we do not know how long it will take to deliver those requirements we deem to be critical to the success of a project, how can we know if we can include other less important ones?
 
-It is often not the reality in practice,
-but estimation should ideally be done by the people likely to do the actual work:
-the developers themselves.
-It shouldn't be done by project managers or those otherwise not involved in development,
-simply because they are not best placed to estimate,
-and those doing the work are the ones who are effectively committing to these figures.
-As well as lacking the inherent technical skills required to estimate,
-having senior non-development roles dictating estimates is that they are at risk of non-development biases such as idealised project timelines and goals which may not be achievable.
+It is often not the reality in practice, but estimation should ideally be done by the people likely to do the actual work: the developers themselves. It shouldn't be done by project managers or those otherwise not involved in development, simply because they are not best placed to estimate, and those doing the work are the ones who are effectively committing to these figures. As well as lacking the inherent technical skills required to estimate, having senior non-development roles dictating estimates is that they are at risk of non-development biases such as idealised project timelines and goals which may not be achievable.
 
 ### Tasks
 
@@ -179,13 +205,25 @@ There are some things that should *never* be split out into a separate task. For
 
 It is these smaller tasks that form the basis of estimation.
 
+::: spoiler
+
+### Time-boxing
+
+Time-boxing is the practice of assigning a limit to the amount of time to spend on a task. This can be done at the small-scale, such as limiting the time of stand-up meetings to a few minutes to the very large, such as specifying a length of time before the first release of a piece of software.
+
+Perhaps the most common usage is when dealing with tasks of unknown complexity, particularly bugs.
+
+If the task is completed within the assigned time everything is good, but if you reach the end of the allocated time and haven't completed the task, you stop and do an analysis of the remaining effort until the task is done.
+
+If the remaining effort is small, you might simply continue; but if it is large, it might make more sense to create a new task that captures the remaining effort, an estimate of that effort (hopefully with more data to give confidence in that estimate), and a prioritization of the task compared to other uses of the time.
+
+This helps avoid situations where a developer is spending a lot of time doing poorly-specified and less-important things and losing velocity, instead of doing things which are advancing the project more quickly and directly.
+
+:::
+
 ### Point Estimation and Velocity
 
-A common method used in Agile software development to simply assign points to tasks depending on how "big" they seem.
-When thinking of effort, these numbers should scale linearly: a 5-point task should be roughly 5 times bigger than a 1-point task.
-These points are abstract: they shouldn't have an explicit time estimate associated with them (although that may implicitly emerge over the course of multiple sprints).
-By not having a time estimate associated with them, it avoids the pressure of committing to a particular time target for a task.
-Different teams may have different ideas of what they consider a "1-point" issue or a "5-point" issue.
+A common method used in Agile software development to simply assign points to tasks depending on how "big" they seem. When thinking of effort, these numbers should scale linearly: a 5-point task should be roughly 5 times bigger than a 1-point task. These points are abstract: they shouldn't have an explicit time estimate associated with them (although that may implicitly emerge over the course of multiple sprints). By not having a time estimate associated with them, it avoids the pressure of committing to a particular time target for a task. Different teams may have different ideas of what they consider a "1-point" issue or a "5-point" issue.
 
 When considering effort, you should include not just the effort to write the code, but also the time to write tests, review the code and fix defects, write documentation, and other parts of the task. Something which is a 10 minute bugfix to a single line of code likely still needs regression tests, time for continuous integration to run, code review to be performed, change-logs to be updated, and so-on.  Even the most trivial of things is likely to take at least an hour of developer working time, and usually at least a couple of hours of elapsed "wall-clock" time.
 
@@ -219,18 +257,15 @@ Point estimates can also be used as a constraint on effort, particularly for tas
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Why is it so Difficult to Estimate?
+### Why is it so Difficult to Estimate?
 
-Estimation is a very valuable skill to learn, and one that is often difficult.
-Lack of experience in estimation can play a part, but a number of psychological causes can also contribute.
-One of these is [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect), a type of cognitive bias in which people tend to overestimate their abilities, whilst in opposition to this is [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome), where due to a lack of confidence people underestimate their abilities.
+Estimation is a very valuable skill to learn, and one that is often difficult. Lack of experience in estimation can play a part, but a number of psychological causes can also contribute. One of these is [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect), a type of cognitive bias in which people tend to overestimate their abilities, whilst in opposition to this is [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome), where due to a lack of confidence people underestimate their abilities.
 
 Another reason it is difficult is that you make correctly estimate the time taken to do the "core" of the task (say, to fix a bug) but not the time to do the associated work to truly finish the task (such as building the software, testing, review, and documentation). These can take more time than the main task in some cases.
 
 The key message here is to be honest about what you can do, and find out as much information that is reasonably appropriate before arriving at an estimate, and don't worry too much if it turns out to be wrong: it is, after all, an *estimate*.
 
-More experience in estimation will also help to reduce these effects.
-So keep estimating!
+More experience in estimation will also help to reduce these effects. So keep estimating!
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -245,23 +280,15 @@ So keep estimating!
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-The exercise of taking a requirement, splitting it into tasks, and estimating the effort does not need to be performed immediately.
-It is only at the point where work is actively being considered on it that you need to know what the tasks are and the effort required.
-Particularly early on in a project it may be difficult to know what the tasks are for a requirement.
+The exercise of taking a requirement, splitting it into tasks, and estimating the effort does not need to be performed immediately. It is only at the point where work is actively being considered on it that you need to know what the tasks are and the effort required. Particularly early on in a project it may be difficult to know what the tasks are for a requirement.
 
-To an extent, the *process* of deciding estimates is more important than the actual result of estimation.
-Creating estimates forces the team to consider the detail of what will be required to fulfil a requirement, beyond just coming up with a number.
-For example, when coming up with an estimate it may become clear there are unrealised dependencies between tasks, or some requirements are not readily estimable due to being too complex or too widely scoped, and require further decomposition into multiple smaller requirements to estimate properly.
-It may also become clear that some requirements may not be achievable at all within the timeframe of the project!
+To an extent, the *process* of deciding estimates is more important than the actual result of estimation. Creating estimates forces the team to consider the detail of what will be required to fulfil a requirement, beyond just coming up with a number. For example, when coming up with an estimate it may become clear there are unrealised dependencies between tasks, or some requirements are not readily estimable due to being too complex or too widely scoped, and require further decomposition into multiple smaller requirements to estimate properly. It may also become clear that some requirements may not be achievable at all within the timeframe of the project!
 
 ## Prioritization
 
-Now we have our estimates we can decide how important each requirement is to the success of the project.
-This should be decided by the project stakeholders; those - or their representatives - who have a stake in the success of the project and are either directly affected or affected by the project, e.g. clients, end-users, collaborators, etc.
+Now we have our estimates we can decide how important each requirement is to the success of the project. This should be decided by the project stakeholders; those - or their representatives - who have a stake in the success of the project and are either directly affected or affected by the project, e.g. clients, end-users, collaborators, etc.
 
-To prioritise these requirements we can use a method called **MoSCoW**, a way to reach a common understanding with stakeholders on the importance of successfully delivering each requirement for a timebox.
-MoSCoW is an acronym that stands for **Must have**, **Should have**, **Could have**, and **Won't have**.
-Each requirement is discussed by the stakeholder group and falls into one of these categories:
+To prioritise these requirements we can use a method called **MoSCoW**, a way to reach a common understanding with stakeholders on the importance of successfully delivering each requirement for a timebox. MoSCoW is an acronym that stands for **Must have**, **Should have**, **Could have**, and **Won't have**. Each requirement is discussed by the stakeholder group and falls into one of these categories:
 
 - *Must Have* (MH) -
   these requirements are critical to the current timebox for it to succeed.
@@ -274,20 +301,14 @@ Each requirement is discussed by the stakeholder group and falls into one of the
 - *Won't Have* (WH) -
   these are agreed to be out of scope, perhaps because they are the least important or not critical for this phase of development.
 
-In typical use, the ratio to aim for of requirements to the MH/SH/CH categories is 60%/20%/20%.
-Importantly, the division is by the requirement *estimates*, not by number of requirements, so 60% means 60% of the overall estimated effort for requirements are Must Haves.
+In typical use, the ratio to aim for of requirements to the MH/SH/CH categories is 60%/20%/20%. Importantly, the division is by the requirement *estimates*, not by number of requirements, so 60% means 60% of the overall estimated effort for requirements are Must Haves.
 
-Why is this important?
-Because it gives you a unique degree of control of your project for each time period.
-It awards you 40% of flexibility with allocating your effort depending on what's critical and how things progress.
-This effectively forces a tradeoff between the effort available and critical objectives, maintaining a significant safety margin.
-The idea is that as a project progresses, even if it becomes clear that you are only able to deliver the Must Haves for a particular time period, you have still delivered it *successfully*.
+Why is this important? Because it gives you a unique degree of control of your project for each time period. It awards you 40% of flexibility with allocating your effort depending on what's critical and how things progress. This effectively forces a tradeoff between the effort available and critical objectives, maintaining a significant safety margin. The idea is that as a project progresses, even if it becomes clear that you are only able to deliver the Must Haves for a particular time period, you have still delivered it *successfully*.
 
 
 # Sprints
 
-A "sprint" in Agile is a fixed-length event, usually between one week and one month in length.
-All work towards is contained within sprints.
+A "sprint" in Agile is a fixed-length event, usually between one week and one month in length. All work towards filling requirements is contained within sprints.
 
 There are typically four events within a Sprint:
 
@@ -308,11 +329,9 @@ In the open source world, there is a different notion of a "sprint" which is a g
 
 ![](fig/scrum_planning.png){alt='diagram of events with sprint planning highlighted'}
 
-The Sprint Planning Meeting is the kickoff meeting for the Sprint.
-During this meeting the Scrum Team will decide what's most important, how much can realistically get done, and how you'll make it happen.
+The Sprint Planning Meeting is the kickoff meeting for the Sprint. During this meeting the Scrum Team will decide what's most important, how much can realistically get done, and how you'll make it happen.
 
-The Product Owner, Scrum Master and Developers all attend the Sprint Planning meeting.
-Other people may also be invited to attend to provide advice.
+The Product Owner, Scrum Master and Developers all attend the Sprint Planning meeting. Other people may also be invited to attend to provide advice.
 
 Sprint Planning needs to answer three questions:
 
@@ -334,8 +353,7 @@ The output from your Sprint Planning Meeting should be your Sprint Backlog inclu
 -   The subset of items from the Product Backlog that you will work on this Sprint
 -   A plan for delivering the Increment by the end of the Sprint
 
-A Sprint Planning Meeting should be an absolute maximum of eight hours for a one month Sprint in a large and complex project, and should be shorter for shorter Sprints.
-Time-boxing the meeting keeps the discussion focussed and allows the Scrum Team to start making delivering value fast.
+A Sprint Planning Meeting should be an absolute maximum of eight hours for a one month Sprint in a large and complex project, and should be shorter for shorter Sprints. Time-boxing the meeting keeps the discussion focussed and allows the Scrum Team to start making delivering value fast.
 
 For a typical research project, an hour should be more than enough time.
 

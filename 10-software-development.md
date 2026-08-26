@@ -54,7 +54,10 @@ The Waterfall Model is a software development methodology in which the typical s
 The Waterfall Model is effective when used for projects where the requirements are clearly defined from the outset.
 It is ideal for projects with long timelines and minimal tolerance for errors, where stakeholders require high confidence in the final outcome.
 
-::: callout
+::: spoiler
+
+#### London's Crossrail project
+
 [London's Crossrail project](https://learninglegacy.crossrail.co.uk/learning-legacy-themes/project-and-programme-management/initiation-and-development/) (later rebranded as the Elizabeth Line) used a Waterfall approach of clear, sequential phases.
 This approach was appropriate because the requirements were known from the start, with little possibility for change throughout the project.
 The line spans 118km, serving 41 stations (10 new) and had been used for over 500 million journeys by early 2025 since its opening in 2022.
@@ -69,7 +72,9 @@ However, there are some disadvantages to the Waterfall Model:
 -   The model assumes that project requirements are fully defined from the beginning, which is rarely the case for smaller, non-critical software projects, particularly in research.
 -   The software is not seen by the client until late in the project timeline, which may increase the risk of it not meeting the client's expectations.
 
-::: callout
+::: spoiler
+#### Melbourne's Myki ticketing system
+
 The [myki ticketing system project](https://www.audit.vic.gov.au/report/operational-effectiveness-myki-ticketing-system?section=) in Melbourne, Australia, demonstrates some of the limitations of the Waterfall approach.
 
 The myki ticketing system was designed to replace the Metcard system for Public Transport Victoria, improving the efficiency and reliability of public transport.
@@ -141,7 +146,10 @@ Disadvantages
 -   Time-consuming due to extensive documentation and testing.
 -   No support for development activities to occur concurrently or to iterate.
 
-::: callout
+::: spoiler
+
+#### Siemens Healthcare
+
 When developing ultrasound systems, [Siemens Healthineers](https://www.mdpi.com/2079-9292/13/11/2051) used a combination of V-Model and Agile (SAFe, SCRUM, Kanban) to balance regulatory compliance with flexibility.
 
 The V-Model and Product Lifecycle Process defined phases, milestones, and quality gates for verification, validation, and documentation, while Agile teams delivered iteratively within those phases.
@@ -169,7 +177,10 @@ Unlike the Waterfall and V models, where the entire product is developed at once
 
 ![](fig/iterative.png){alt="image of iterative software development"}
 
-::: callout
+::: spoiler
+
+#### Google Search
+
 The evolution of Google’s search engine exemplifies the principles of Agile development through continuous iteration and adaptation.
 
 Rather than being developed in a rigid, one-time release, Google Search has undergone thousands of incremental improvements, including hundreds of algorithm updates annually.
@@ -180,8 +191,7 @@ Now handling at least 8.5 billion searches daily, Google’s sustained success i
 
 #### Agile
 
-Agile software development is a phrase used to describe any iterative method which broadly follows a set of principles determined by a group of 17 software developers, called the Agile Alliance, at a meeting in Utah in 2001.
-These principles, outlined in the Manifesto for Agile Software Development, are as follows:
+Agile software development is a phrase used to describe any iterative method which broadly follows a set of principles determined by a group of 17 software developers, called the Agile Alliance, at a meeting in Utah in 2001. These principles, outlined in the Manifesto for Agile Software Development, are as follows:
 
 -   Individuals and interactions over processes and tools
 
@@ -191,11 +201,12 @@ These principles, outlined in the Manifesto for Agile Software Development, are 
 
 -   Responding to change over following a plan
 
-The Agile Manifesto was inspired by the desire for a more rapid and lightweight approach to software development, as an alternative to the more heavyweight processes such as Waterfall and V-Model.
-It drew on ideas from existing lightweight software development methods such as rapid application development, the rational unified process aka RUP, dynamic systems development method, scrum, extreme programming and feature driven development.
-Although these methods were developed in the 1990s, before the Agile Manifesto, they are now all referred to under the umbrella term 'Agile' and, with the exception of Scrum, these methods have now gone out of fashion.
+The Agile Manifesto was inspired by the desire for a more rapid and lightweight approach to software development, as an alternative to the more heavyweight processes such as Waterfall and V-Model. It drew on ideas from existing lightweight software development methods such as rapid application development, the rational unified process aka RUP, dynamic systems development method, scrum, extreme programming and feature driven development. Although these methods were developed in the 1990s, before the Agile Manifesto, they are now all referred to under the umbrella term 'Agile' and, with the exception of Scrum, these methods have now gone out of fashion.
 
-::: callout
+::: spoiler
+
+#### Amazon
+
 Amazon embodies the Agile principle of customer collaboration through relentless feedback-driven iteration.
 
 Amazon systematically gathers and acts on customer feedback to continually refine its products, and small, agile teams rapidly prototype and test ideas.
@@ -215,7 +226,10 @@ Disadvantages of Iterative Development:
 -   Without fully determined requirements and design, software can become messy or 'hacky' if quality control standards are not maintained
 -   Since not all requirements are defined from the start, unforeseen changes may arise during the development process which require revision of the software architecture, costing more time in the long run.
 
-::: callout
+::: spoiler
+
+#### Universal Credit
+
 The [UK's Universal Credit welfare reform project](https://www.computerweekly.com/news/2240185166/Universal-Credit-will-cost-taxpayers-128bn) demonstrates that estimating timings and delivery costs can be challenging when using an Agile delivery method.
 
 The project was initially budgeted at £2.2 billion but is estimated to have cost £15-16 billion.
@@ -225,26 +239,18 @@ Originally due to complete by 2017, the project end date is now 2028.
 
 ## Which Model to Choose?
 
-Any model can be used for any software development project.
-Waterfall and V-Model and more likely to be used when all the requirements are known at the start of the project.
-Iterative methods are particularly suited to prototyping, where quick development and user feedback help shape early versions of a system, and to research software, where evolving requirements and experimental objectives demand adaptability.
-However, iterative approaches can be used on any project including those which are large scale and safety critical.
+Any model can be used for any software development project. Waterfall and V-Model and more likely to be used when all the requirements are known at the start of the project. Iterative methods are particularly suited to prototyping, where quick development and user feedback help shape early versions of a system, and to research software, where evolving requirements and experimental objectives demand adaptability. However, iterative approaches can be used on any project including those which are large scale and safety critical.
 
-It's also worth noting that, to some extent, linear approaches become iterative in reality, as it is nearly always necessary to return to previous stages throughout the software development process.
-For example, knowing 100% of the requirements from the start is nearly always impossible.
-Even if a waterfall approach is applied, changes will most likely be made at each of the stages, requiring revision of an earlier stage.
+It's also worth noting that, to some extent, linear approaches become iterative in reality, as it is nearly always necessary to return to previous stages throughout the software development process. For example, knowing 100% of the requirements from the start is nearly always impossible. Even if a waterfall approach is applied, changes will most likely be made at each of the stages, requiring revision of an earlier stage.
 
-In this course, we will focus on Agile, as it is currently a commonly used method for software engineering across sectors, and it suits the style of project you will likely work on if you work in industry at a startup or technology firm.
-There are as many different ways to do Agile software development as there are teams doing Agile software development.
-We will discuss common Agile practices without adhering to a particular variant or style.
+In this course, we will focus on Agile, as it is currently a commonly used method for software engineering across sectors, and it suits the style of project you will likely work on if you work in industry at a startup or technology firm. There are as many different ways to do Agile software development as there are teams doing Agile software development. We will discuss common Agile practices without adhering to a particular variant or style.
 
-::: callout
+::: spoiler
 
 ### Scrum
 
 Scrum is one of the most popular Agile frameworks.
-Scrum is defined in the Scrum Guide as 'a lightweight framework that helps people, teams and organisations generate value through adaptive solutions for complex problems'.
-The core philosophy of Scrum is to make incremental progress toward a goal through repeated iterations.
+Scrum is defined in the Scrum Guide as 'a lightweight framework that helps people, teams and organisations generate value through adaptive solutions for complex problems'. The core philosophy of Scrum is to make incremental progress toward a goal through repeated iterations.
 
 Scrum is most commonly used in larger Agile teams where more defined roles and processes are required.  Research software and small start-ups rarely have teams of a size that needs the formalism of Scrum, so it is less common in those situations.  Nevertheless, many of the ideas from Scrum are used in less formal Agile processes.
 
