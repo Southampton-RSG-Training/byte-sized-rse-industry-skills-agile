@@ -1,5 +1,22 @@
+---
+title: "The Agile Software Development Workflow"
+teaching: 0
+exercises: 0
+---
 
-# What To Do
+::: questions
+- How do you identify tasks that need to be completed as part of the software development process?
+- What methods can you use to estimate how long a task will take?
+- What activities are involved in a typical Agile sprint?
+:::
+
+::: objectives
+- Learn how to write user stories.
+- Estimate the effort required for a task.
+- Be able to participate effectively in an Agile sprint.
+:::
+
+# Working out What To Do
 
 In this section, we'll introduce two established key concepts for capturing the needs of a project,
 
@@ -424,6 +441,11 @@ Burndown charts within a sprint rarely follow the ideal line, because effort nat
 ## Repeat
 
 Once a sprint is completed, the process starts again from the beginning with the next sprint.
+
+Projects often fall into two modes:
+
+- building new software, where the development process eventually slows down or completely stops once there are enough features. This is common in research software where the software is complete enough to serve the research process, and finding tends to be limited by grants and time.
+- ongoing development of a software product, where the software is working and being continually refined, bugs fixed, new features added, but there is no final endpoint. This is common in commercial software products, where there are always new features to add, changes to underlying technologies that need to be dealt with, and constant exposure to usage and the issues that arise from that.
 
 ::: keypoints
 
