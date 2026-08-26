@@ -236,7 +236,19 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="10-software-development.html">1. Software Development Process and the Landscape of Approaches</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="11-agile-workflow.html">2. </a>
     </div>
 <!--/div.accordion-header-->
 
@@ -299,11 +311,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>All in One View</h1>
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-10-software-development"><p>Content from <a href="10-software-development.html">Software Development Process and the Landscape of Approaches</a></p>
 <hr>
-<p>Last updated on 2026-08-04 |
+<p>Last updated on 2026-08-26 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/10-software-development.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -315,8 +327,11 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What are the main stages in a typical software development
+process?</li>
+<li>What are waterfall, iterative, and V-Model approaches to software
+development?</li>
+<li>What is Agile and how does it compare to project management?</li>
 </ul>
 </div>
 </div>
@@ -326,127 +341,473 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Highlight the main stages in a software development process</li>
+<li>Order and describe the stages within a typical software development
+process and how these apply within waterfall and iterative
+approaches</li>
+<li>Summarise the V-Model approach to software development</li>
+<li>Understand the core ideas of the Agile approach to software
+development</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="the-stages-of-a-typical-software-development-process">The Stages of a Typical Software Development Process<a class="anchor" aria-label="anchor" href="#the-stages-of-a-typical-software-development-process"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="section level3">
+<h3 id="writing-code-vs-engineering-software">Writing Code vs Engineering Software<a class="anchor" aria-label="anchor" href="#writing-code-vs-engineering-software"></a>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+<p>Within academic research, software is often seen as a necessary but
+throwaway artefact. For example, there may be research questions for a
+given research project, code is created to answer those questions, the
+code is run over some data and analysed, and finally a publication is
+written based on those results. After this the code may be discarded or
+stored on a laptop somewhere, unlikely to ever be run again.</p>
+<p>In this context, the terms <em>programming</em> (or even
+<em>coding</em>) and <em>software engineering</em> are often used
+interchangeably, but there are actually a great number of differences
+between them.</p>
 </div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="section level3">
+<h3 id="software-development-process">Software Development Process<a class="anchor" aria-label="anchor" href="#software-development-process"></a>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>Thinking about software engineering from that wider view, there are
+some typical stages that a software development project would go
+through.</p>
+<p>The typical stages of a software development process are:</p>
+<ul>
+<li>
+<strong>Requirements gathering:</strong> the process of identifying
+and recording the exact requirements for a software project before it
+begins. This helps maintain a clear direction throughout development,
+and sets clear targets for what the software needs to do.</li>
+<li>
+<strong>Design:</strong> where the requirements are translated into
+an overall design for the software. It covers what will be the basic
+software ‘components’ and how they will fit together, as well as the
+tools and technologies that will be used, which will together address
+the requirements identified in the first stage.</li>
+<li>
+<strong>Implementation:</strong> the software is developed according
+to the design, implementing the solution that meets the requirements set
+out in the requirements gathering stage.</li>
+<li>
+<strong>Testing:</strong> the software is tested with the intent to
+discover and rectify any defects, and also to ensure that the software
+meets its defined requirements, i.e. does it actually do what it should
+do reliably?</li>
+<li>
+<strong>Deployment:</strong> where the software is deployed or in
+some way released, and used for its intended purpose within its intended
+environment.</li>
+<li>
+<strong>Maintenance:</strong> where updates are made to the software
+to ensure it remains fit for purpose, which typically involves fixing
+any further discovered issues and evolving it to meet new or changing
+requirements.</li>
+</ul>
+<p>These stages are followed implicitly or explicitly in every software
+project but there are many different ways to arrange them.</p>
+<p>The stages may be arranged according to an established model of
+software development.</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</section><section><h2 class="section-heading" id="models-of-software-development">Models of Software Development<a class="anchor" aria-label="anchor" href="#models-of-software-development"></a>
 </h2>
 <hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<div class="section level3">
+<h3 id="waterfall">Waterfall<a class="anchor" aria-label="anchor" href="#waterfall"></a>
+</h3>
+<figure><img src="fig/waterfall.png" alt="diagram of the waterfall model" class="figure mx-auto d-block"></figure><p>The Waterfall Model is a software development methodology in which
+the typical stages of the software development process (that we outlined
+above) are followed step-by-step in a set, sequential order.</p>
+<p>The Waterfall Model is effective when used for projects where the
+requirements are clearly defined from the outset. It is ideal for
+projects with long timelines and minimal tolerance for errors, where
+stakeholders require high confidence in the final outcome.</p>
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p><a href="https://learninglegacy.crossrail.co.uk/learning-legacy-themes/project-and-programme-management/initiation-and-development/" class="external-link">London’s
+Crossrail project</a> (later rebranded as the Elizabeth Line) used a
+Waterfall approach of clear, sequential phases. This approach was
+appropriate because the requirements were known from the start, with
+little possibility for change throughout the project. The line spans
+118km, serving 41 stations (10 new) and had been used for over 500
+million journeys by early 2025 since its opening in 2022. Despite the
+project delays and overspend, the Elizabeth Line was widely praised as
+an engineering triumph.</p>
+<figure><img src="fig/elizabeth-line-train.jpg" alt="Elizabeth Line train 345001 at Abbey Wood" class="figure mx-auto d-block"><div class="figcaption">By Alex6nt - Own work, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/w/index.php?curid=118896679" class="external-link uri">https://commons.wikimedia.org/w/index.php?curid=118896679</a>
+</div>
+</figure>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+<p>However, there are some disadvantages to the Waterfall Model:</p>
+<ul>
+<li>The model is relatively inflexible. Once a phase is completed, the
+model does not account for going back to make changes and therefore
+there is no mechanism for error correction.</li>
+<li>The model assumes that project requirements are fully defined from
+the beginning, which is rarely the case for smaller, non-critical
+software projects, particularly in research.</li>
+<li>The software is not seen by the client until late in the project
+timeline, which may increase the risk of it not meeting the client’s
+expectations.</li>
+</ul>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The <a href="https://www.audit.vic.gov.au/report/operational-effectiveness-myki-ticketing-system?section=" class="external-link">myki
+ticketing system project</a> in Melbourne, Australia, demonstrates some
+of the limitations of the Waterfall approach.</p>
+<p>The myki ticketing system was designed to replace the Metcard system
+for Public Transport Victoria, improving the efficiency and reliability
+of public transport. Almost $1 billion was committed to this project in
+July 2005.</p>
+<p>The project was expected to be completed in two years but ended up
+taking over nine years in total and the budgeted cost was exceeded by
+55%. Furthermore, due to the rigidly fixed scope and upfront planning,
+the system could not adapt to evolving user expectations or new
+technologies. The system was plagued by multiple issues including
+overcharging, slow touch readers, top-up delays and limited device
+compatibility.</p>
+<p>These issues were all symptomatic of the inflexible development
+process.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="v-model">V-Model<a class="anchor" aria-label="anchor" href="#v-model"></a>
+</h3>
+<p>The concept of the V-model was developed simultaneously, but
+independently, in Germany and in the United States in the late
+1980s.</p>
+<p>The V-Model emphasises the importance of validating each level of the
+software development. This approach ensures that verification (checking
+work during development) and validation (checking final products against
+requirements) are systematically integrated throughout the process.</p>
+<p>The left side of the V includes creation and verification steps,
+i.e. does it work according to the specification.</p>
+<ul>
+<li><p>Requirements gathering</p></li>
+<li><p>System design</p></li>
+<li><p>Architectural design</p></li>
+<li><p>Module design</p></li>
+<li><p>Coding</p></li>
+</ul>
+<p>The right side of the V includes validation for each step, i.e. have
+you built the right thing</p>
+<ul>
+<li><p>Unit testing (validation for module design)</p></li>
+<li><p>Integration testing (validation for architectural
+design)</p></li>
+<li><p>System testing (validation for system design)</p></li>
+<li><p>User acceptance testing (validation for requirements
+gathering)</p></li>
+</ul>
+<figure><img src="fig/v-model.png" alt="image of the v-model of software development" class="figure mx-auto d-block"></figure><p>The V-Model is used in safety-critical, regulated industries where
+traceability, formal verification and compliance with standards are
+essential. These include:</p>
+<ul>
+<li><p>Aerospace and defense</p></li>
+<li><p>Automotive</p></li>
+<li><p>Medical devices</p></li>
+<li><p>Railways and transportation</p></li>
+</ul>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The V‑Model is a mandated development framework in German federal and
+defense software projects.</p>
+<p>This originated in the late 1980s with the Ministry of Defense and
+later extended to civilian administration.</p>
+</div>
+</div>
+</div>
+<p>Advantages</p>
+<ul>
+<li>Focus on quality through early and continuous testing</li>
+<li>The strong link between requirements and the final product improve
+the traceability of software changes.</li>
+</ul>
+<p>Disadvantages</p>
+<ul>
+<li>Not flexible so struggles to deal with changing requirements</li>
+<li>Time-consuming due to extensive documentation and testing.</li>
+<li>No support for development activities to occur concurrently or to
+iterate.</li>
+</ul>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>When developing ultrasound systems, <a href="https://www.mdpi.com/2079-9292/13/11/2051" class="external-link">Siemens
+Healthineers</a> used a combination of V-Model and Agile (SAFe, SCRUM,
+Kanban) to balance regulatory compliance with flexibility.</p>
+<p>The V-Model and Product Lifecycle Process defined phases, milestones,
+and quality gates for verification, validation, and documentation, while
+Agile teams delivered iteratively within those phases.</p>
+<p>Each Agile increment was aligned to V-Model requirements, meaning
+that each increment included test evidence, documentation, and
+traceability, as well as the software itself.</p>
+<p>Regular clinical feedback was fed into the development early and
+often, allowing the team to adapt to changes without breaking
+compliance.</p>
+<p>This hybrid process has improved efficiency (release cycles take
+nearly half the time) and improved predictability. This demonstrates how
+writing code iteratively (Agile) and engineering software with a focus
+on validation and verification (V-Model) can complement each other in
+practice.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="iterative">Iterative<a class="anchor" aria-label="anchor" href="#iterative"></a>
+</h3>
+<p>In many cases, it doesn’t make sense for software development to
+follow a linear process such as the Waterfall or V model for a number of
+reasons. For example:</p>
+<ul>
+<li>Changes to a design mean that the requirements must be adjusted</li>
+<li>A company may build on the same project for years, adding more
+complexity</li>
+<li>The design of a key algorithm may need changing, leading to a need
+to change the implementation</li>
+<li>A mistake is could be found during deployment which requires changes
+to the implementation</li>
+</ul>
+<p>In iterative development, a large application is built in smaller,
+manageable parts called iterations. Each iteration includes planning,
+design, development, and testing, and produces a working version of the
+product. Unlike the Waterfall and V models, where the entire product is
+developed at once, iterative development adds features incrementally,
+with each cycle enhancing the functionality of the product.</p>
+<figure><img src="fig/iterative.png" alt="image of iterative software development" class="figure mx-auto d-block"></figure><div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The evolution of Google’s search engine exemplifies the principles of
+Agile development through continuous iteration and adaptation.</p>
+<p>Rather than being developed in a rigid, one-time release, Google
+Search has undergone thousands of incremental improvements, including
+hundreds of algorithm updates annually.</p>
+<p>Now handling at least 8.5 billion searches daily, Google’s sustained
+success is built on a foundation of iterative enhancements, frequent
+feedback integration, and rapid deployment.</p>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="agile">Agile<a class="anchor" aria-label="anchor" href="#agile"></a>
+</h4>
+<p>Agile software development is a phrase used to describe any iterative
+method which broadly follows a set of principles determined by a group
+of 17 software developers, called the Agile Alliance, at a meeting in
+Utah in 2001. These principles, outlined in the Manifesto for Agile
+Software Development, are as follows:</p>
+<ul>
+<li><p>Individuals and interactions over processes and tools</p></li>
+<li><p>Working software over comprehensive documentation</p></li>
+<li><p>Customer collaboration over contract negotiation</p></li>
+<li><p>Responding to change over following a plan</p></li>
+</ul>
+<p>The Agile Manifesto was inspired by the desire for a more rapid and
+lightweight approach to software development, as an alternative to the
+more heavyweight processes such as Waterfall and V-Model. It drew on
+ideas from existing lightweight software development methods such as
+rapid application development, the rational unified process aka RUP,
+dynamic systems development method, scrum, extreme programming and
+feature driven development. Although these methods were developed in the
+1990s, before the Agile Manifesto, they are now all referred to under
+the umbrella term ‘Agile’ and, with the exception of Scrum, these
+methods have now gone out of fashion.</p>
+<div id="callout6" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Amazon embodies the Agile principle of customer collaboration through
+relentless feedback-driven iteration.</p>
+<p>Amazon systematically gathers and acts on customer feedback to
+continually refine its products, and small, agile teams rapidly
+prototype and test ideas.</p>
+<p>This Agile model has driven Amazon’s extensive expansion into
+e-commerce, cloud (AWS), smart devices, and subscription services.</p>
+</div>
+</div>
+</div>
+<p>Advantages of Iterative Development:</p>
+<ul>
+<li>Progress on the software product can initially be faster as less
+time is spent on the requirements and design stages before starting
+implementation</li>
+<li>Iterative approaches allow for continuous feedback, adaptation, and
+improvement throughout the project’s lifecycle.</li>
+<li>Defects can be found and corrected early, preventing them from
+affecting later stages.</li>
+<li>After each iteration, feedback can be gathered from users, allowing
+for adjustments and improvements to meet their expectations.</li>
+</ul>
+<p>Disadvantages of Iterative Development:</p>
+<ul>
+<li>Without fully determined requirements and design, software can
+become messy or ‘hacky’ if quality control standards are not
+maintained</li>
+<li>Since not all requirements are defined from the start, unforeseen
+changes may arise during the development process which require revision
+of the software architecture, costing more time in the long run.</li>
+</ul>
+<div id="callout7" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The <a href="https://www.computerweekly.com/news/2240185166/Universal-Credit-will-cost-taxpayers-128bn" class="external-link">UK’s
+Universal Credit welfare reform project</a> demonstrates that estimating
+timings and delivery costs can be challenging when using an Agile
+delivery method.</p>
+<p>The project was initially budgeted at £2.2 billion but is estimated
+to have cost £15-16 billion.</p>
+<p>Originally due to complete by 2017, the project end date is now
+2028.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="which-model-to-choose">Which Model to Choose?<a class="anchor" aria-label="anchor" href="#which-model-to-choose"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Any model can be used for any software development project. Waterfall
+and V-Model and more likely to be used when all the requirements are
+known at the start of the project. Iterative methods are particularly
+suited to prototyping, where quick development and user feedback help
+shape early versions of a system, and to research software, where
+evolving requirements and experimental objectives demand adaptability.
+However, iterative approaches can be used on any project including those
+which are large scale and safety critical.</p>
+<p>It’s also worth noting that, to some extent, linear approaches become
+iterative in reality, as it is nearly always necessary to return to
+previous stages throughout the software development process. For
+example, knowing 100% of the requirements from the start is nearly
+always impossible. Even if a waterfall approach is applied, changes will
+most likely be made at each of the stages, requiring revision of an
+earlier stage.</p>
+<p>In this course, we will focus on Agile, as it is currently a commonly
+used method for software engineering across sectors, and it suits the
+style of project you will likely work on if you work in industry at a
+startup or technology firm. There are as many different ways to do Agile
+software development as there are teams doing Agile software
+development. We will discuss common Agile practices without adhering to
+a particular variant or style.</p>
+<div id="scrum" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="scrum" class="callout-inner">
+<h3 class="callout-title">Scrum</h3>
+<div class="callout-content">
+<p>Scrum is one of the most popular Agile frameworks. Scrum is defined
+in the Scrum Guide as ‘a lightweight framework that helps people, teams
+and organisations generate value through adaptive solutions for complex
+problems’. The core philosophy of Scrum is to make incremental progress
+toward a goal through repeated iterations.</p>
+<p>Scrum is most commonly used in larger Agile teams where more defined
+roles and processes are required. Research software and small start-ups
+rarely have teams of a size that needs the formalism of Scrum, so it is
+less common in those situations. Nevertheless, many of the ideas from
+Scrum are used in less formal Agile processes.</p>
+<p>In Scrum:</p>
+<ol style="list-style-type: decimal">
+<li><p>A <strong>Product Backlog</strong> is created. This is a list of
+everything that needs to be done to build the product.</p></li>
+<li><p>Work is done in <strong>Sprints</strong>, which are short blocks
+of time (&lt; 1 month).</p></li>
+<li><p>At the start of a Sprint, a subset of the Product Backlog is
+selected to be worked on during the Sprint. This is called the
+<strong>Sprint Backlog</strong>.</p></li>
+<li><p>The developers work on tasks from the Sprint Backlog during the
+Sprint, creating an <strong>Increment of Value.</strong></p></li>
+<li><p>The <strong>Scrum Team</strong> and its stakeholders inspect the
+results and adjust for the next Sprint.</p></li>
+<li><p>Repeat</p></li>
+</ol>
+<figure><img src="fig/scrum_simplified.png" alt="simplified diagram of scrum with arrows showing that the product backlog is broken down into sprint backlogs and these are worked on throughout a sprint to create an increment of value" class="figure mx-auto d-block"></figure><div class="section level4">
+<h4 id="scrum-buzzwords-decoded">Scrum Buzzwords Decoded<a class="anchor" aria-label="anchor" href="#scrum-buzzwords-decoded"></a>
+</h4>
+<ul>
+<li>Product Owner - responsible for maximising the value of the
+product.</li>
+<li>Product Backlog - Ordered list of what is needed to improve the
+product.</li>
+<li>Increment of Value - a concrete stepping stone toward the Product
+Goal.</li>
+<li>Scrum Team - one Scrum Master, one Product Owner, and Developers
+(we’ll discuss what each of these roles does later in the course).</li>
+<li>Sprint Backlog - the set of Product Backlog items selected for the
+Sprint.</li>
+<li>Sprint - Fixed-length events of one month or less in which the work
+gets done.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Stages of Software Development from <a href="https://carpentries-incubator.github.io/python-intermediate-development/30-section3-intro.html" class="external-link">Python
+Intermediate Development Carpentries Training</a>
+</li>
+<li><a href="https://scrumguides.org/" class="external-link">The Scrum Guide</a></li>
+<li><a href="https://hbr.org/2023/10/its-time-to-end-the-battle-between-waterfall-and-agile" class="external-link">It’s
+Time to End the Battle Between Waterfall and Agile</a></li>
+<li>Software Engineering by Ian Sommerville</li>
+<li>Software Engineering: Theory and Practice by Shari Lawrence
+Pfleeger</li>
+<li><a href="https://library.soton.ac.uk/techinfo/standards" class="external-link">British
+Standards Online</a></li>
+<li><a href="https://en.wikipedia.org/wiki/V-model" class="external-link">V-Model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Waterfall_model" class="external-link">Waterfall
+Model</a></li>
+<li>Iterative ideas from <a href="https://easternpeak.com/definition/iterative-development/#:~:text=Iterative%20development%20is%20a%20software,%2C%20development%2C%20and%20testing%20steps." class="external-link">Eastern
+Peak</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Agile_software_development" class="external-link">Agile</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PRINCE2" class="external-link">PRINCE2</a></li>
+<li><a href="https://apmg-international.com/" class="external-link">APMG
+International</a></li>
+<li><a href="https://www.axelos.com/" class="external-link">AXELOS</a></li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -455,14 +816,28 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>The typical stages of a software development process are:
+requirements gathering, design, implementation, testing, deployment and
+maintenance</li>
+<li>These stages are arranged differently in different models of
+software development</li>
+<li>The Waterfall model follows the stages in a set, sequential
+order</li>
+<li>The V-Model emphasises the importance of testing and validation at
+each stage</li>
+<li>In iterative development, a large application is built in smaller,
+manageable parts called iterations.</li>
+<li>Boehm’s Spiral is an iterative, risk-driven approach to software
+development</li>
+<li>Agile software development is any iterative method that follows a
+set of Agile principles: Individuals and interactions over processes and
+tools; Working software over comprehensive documentation; Customer
+collaboration over contract negotiation; Responding to change over
+following a plan.</li>
+<li>Any model can be used for any software development project but some
+may suit particular types of projects better than others</li>
+<li>Software development is concerned with delivering a project whereas
+project management will also cover the wider project aspects.</li>
 </ul>
 </div>
 </div>
@@ -471,7 +846,812 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section>
+</section></section><section id="aio-11-agile-workflow"><p>Content from <a href="11-agile-workflow.html"></a></p>
+<hr>
+<p>Last updated on 2026-08-26 |
+
+        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/11-agile-workflow.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="section level1">
+<h1 id="what-to-do">What To Do<a class="anchor" aria-label="anchor" href="#what-to-do"></a>
+</h1>
+<p>In this section, we’ll introduce two established key concepts for
+capturing the needs of a project,</p>
+<ul>
+<li>
+<em>User stories</em>, which capture what is needed from solely the
+perspective of the client</li>
+<li>
+<em>Requirements</em>, which state what needs to be built (or what
+needs to change) by the development team</li>
+</ul>
+<p>So whilst they both capture what the software will do, each reflects
+one side of the client/developer perspective.</p>
+<div class="section level2">
+<h2 id="user-stories">User Stories<a class="anchor" aria-label="anchor" href="#user-stories"></a>
+</h2>
+<p>Capturing “requirements” is pivotal to understanding what needs to be
+built, but whilst they state what is technically required, they lack the
+end-user context of what they are and why they are important. User
+stories aim to capture this perspective, being short and simple
+descriptions of new features or functionality from the perspective of
+the end user themselves. Therefore, user stories help:</p>
+<ul>
+<li>The project remains <em>user-centered</em> and <em>focused on real
+needs</em>, rather than jumping prematurely to solution or technical
+requirements</li>
+<li>To clarify the the <em>value</em> behind a feature, and anchor
+development in <em>user outcomes</em>, not just functionality</li>
+<li>Prevent requirements ballooning, if not guided by real user
+goals</li>
+<li>Prioritise what matters to users</li>
+<li>Provide a <em>concise</em> description of value - they should be
+short and encapsulate a single aspect</li>
+</ul>
+<p>They typically follow the following template, to ensure user stories
+are clear and concise:</p>
+<blockquote>
+<p>As a <em>[type of user]</em>, I want <em>[an action]</em> so that
+<em>[benefit]</em>.</p>
+</blockquote>
+<p>Breaking each of these three aspects down:</p>
+<ul>
+<li>“As a <em>[type of user]</em>”: who are we building this for? There
+may be more than one type of user, but in any case we need to think
+about this from the user’s perspective.</li>
+<li>“I want <em>[an action]</em>”: this describes the intent of this
+type of user, not the features of the system. What do they want to
+achieve?</li>
+<li>“so that <em>[benefit]</em>”: what is the benefit they are trying to
+realise? How will it help them directly, solve a problem for them?</li>
+</ul>
+<p>Some examples of user stories include:</p>
+<ul>
+<li>E-commerce site: as a shopper, I want to add items to my cart so
+that I can purchase multiple products at once</li>
+<li>Mobile application: as a user, I want to receive push notifications
+for important updates so that I stay informed when I’m not using the
+app</li>
+</ul>
+<p>As mentioned, note that they are short and to the point, and each
+encapsulate a single aspect.</p>
+</div>
+<div class="section level2">
+<h2 id="requirements">Requirements<a class="anchor" aria-label="anchor" href="#requirements"></a>
+</h2>
+<p>In general, a requirement is a <em>capability or condition that must
+be met for software to solve a problem or address a need</em>. They form
+the foundation of our project and drive what will be developed, so if we
+do not properly explore and understand what is required, the software
+will not be suitable for it’s intended purpose.</p>
+<p>Whilst user stories focus purely on the user perspective,
+requirements concentrate on what technically needs to change. For this
+reason, it’s common to develop user stories first (to understand the
+user), then from those stories, derive requirements (to understand what
+needs to be built). Requirements typically address technical aspects of
+software functionality and features that are needed to complete a user
+story, and are more numerous than the collection of user stories.
+Therefore, each user story is often addressed by more than one
+requirement.</p>
+<p>There is repeated evidence that most errors aren’t actually
+introduced during the software development stage, but during
+requirements analysis and design. For example, <a href="https://doi.org/10.1109/ISRE.1993.324825" class="external-link">one analysis</a> of the
+software errors uncovered during integration and testing and the Voyager
+(1977) and Galileo (1989) probes discovered that 79% of these errors
+were due to a poor understanding of requirements.</p>
+<p>However, it is unlikely that we will be able to determine all of the
+requirements correctly and completely upfront. In practice, very often
+requirements may need be flexible to some extent and may change as the
+project evolves, so we need to ensure we are able to accommodate any
+agreed changes.</p>
+<div class="section level3">
+<h3 id="requirements-are-more-than-just-features">Requirements are More than just Features<a class="anchor" aria-label="anchor" href="#requirements-are-more-than-just-features"></a>
+</h3>
+<p>When considering software requirements, it is very tempting to just
+think about the features users need. However, many design choices in a
+software project depend on the users themselves and the environment in
+which the software is expected to run (as well as <em>how</em> the
+software should run), and these aspects should be considered as part of
+the software’s <em>non-functional</em> requirements.</p>
+<p>To explore the importance of this aspect, let’s consider two software
+types, mobile applications and embedded software. They may appear
+similar, but examining the environments in which they are developed and
+operate uncovers many differences that need to be accounted for in order
+for the software to be fit for purpose.</p>
+<table class="table">
+<colgroup>
+<col width="26%">
+<col width="30%">
+<col width="42%">
+</colgroup>
+<thead><tr>
+<th>Concern</th>
+<th>Mobile Apps</th>
+<th>Embedded Software</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Platform</td>
+<td>Work on range of mobile hardware and iOS/Android operating
+systems</td>
+<td>Exact specification of hardware is known - often not necessary to
+support multiple devices; typically low power</td>
+</tr>
+<tr>
+<td>Development Language</td>
+<td>Typically written in one of the higher-level platform preferred
+languages (e.g. Java, Kotlin, Swift)</td>
+<td>Typically lower-level language (e.g. C) for better control of
+resources</td>
+</tr>
+<tr>
+<td>Compilation</td>
+<td>Users will not (usually) modify / compile the software</td>
+<td>Users will not (usually) modify / compile the software</td>
+</tr>
+<tr>
+<td>Installation</td>
+<td>Usually distributed via a controlled app store</td>
+<td>Usually distributed pre-installed on a physical device</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Must have graphical interface suitable for a touch display</td>
+<td>May have no user interface, or interface may be physical
+buttons</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Probably in the software itself or on a Web page</td>
+<td>Documentation probably in a technical manual with a separate user
+manual</td>
+</tr>
+<tr>
+<td>Uptime</td>
+<td>May not run continuously due to restarts</td>
+<td>May need to run continuously for the lifetime of the device</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, whilst a single piece of software may provide the same
+<em>functionality</em> on a mobile app or embedded device (for example,
+a photo frame application), the other <em>non-functional</em>
+considerations describe facets of how the software must be developed and
+how it must operate (often as constraints), and we must account for them
+in our requirements.</p>
+<p>Some typical classes of non-functional categories include:</p>
+<ul>
+<li>Security: how do we ensure a user is authenticated and authorised to
+conduct a particular action?</li>
+<li>Performance: what performance goals will the software be required to
+satisfy?</li>
+<li>Usability: how will the user interact with the software?</li>
+<li>Reproducibility: how do we ensure others are able to reproduce
+results generated using the software?</li>
+<li>Portability: to what extent should the software be able to run on
+different systems with minimal changes?</li>
+<li>Maintainability: how easily can the software be modified, enhanced,
+or restructured?</li>
+<li>Reliability: to what extent should the software we able to operate
+without errors and unexpected failures?</li>
+<li>Availability: to what extent should the software remain accessible
+and operational when needed?</li>
+</ul>
+<p>A more comprehensive list can be found <a href="https://en.wikipedia.org/wiki/Non-functional_requirement#Examples" class="external-link">on
+Wikipedia</a>.</p>
+</div>
+<div class="section level3">
+<h3 id="capturing-requirements-in-a-product-backlog">Capturing Requirements in a Product Backlog<a class="anchor" aria-label="anchor" href="#capturing-requirements-in-a-product-backlog"></a>
+</h3>
+<p>A <em>product backlog</em> is a prioritised list of functionality
+that a product should contain; essentially, a list of work for the
+development team. It represents everything that might be needed in the
+product and is the single source of truth for all work. They include
+requirement-related aspects such as features, bugs, improvements, and
+non-functional requirements, but also any other supporting tasks such as
+any needed research (also known as <em>spikes</em>), and other
+implementation-related tasks (like cleaning up/refactoring code).</p>
+<p>A product backlog is owned by the <em>product owner</em> (the
+client), and is dynamic, in that it evolves as the needs of the product
+evolves. Regular backlog refinement sessions throughout a project ensure
+items are updated, estimated, re-prioritised if necessary, and ready for
+upcoming sprints.</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="estimation">Estimation<a class="anchor" aria-label="anchor" href="#estimation"></a>
+</h2>
+<p>Once we have an initial set of requirements captured, we need to
+understand their importance in relation to each other: essentially we
+need to prioritise them.</p>
+<p>But before we can prioritise our requirements, there are some things
+we need to find out.</p>
+<p>Firstly, we need to know:</p>
+<ul>
+<li>
+<em>The period of time we have to resolve these requirements</em> -
+e.g. before the next software release, pivotal demonstration, or other
+deadlines requiring their completion.</li>
+<li>
+<em>How much overall effort we have available</em> - i.e. who will
+be involved and how much of their time we will have during this
+period.</li>
+</ul>
+<p>We also need estimates for how long each requirement will take to
+resolve, since it’s difficult to meaningfully prioritise requirements
+without knowing what the effort tradeoffs will be. Even if we know how
+important each requirement is, how would we even know if completing the
+project is possible? Or if we do not know how long it will take to
+deliver those requirements we deem to be critical to the success of a
+project, how can we know if we can include other less important
+ones?</p>
+<p>It is often not the reality in practice, but estimation should
+ideally be done by the people likely to do the actual work: the
+developers themselves. It shouldn’t be done by project managers or those
+otherwise not involved in development, simply because they are not best
+placed to estimate, and those doing the work are the ones who are
+effectively committing to these figures. As well as lacking the inherent
+technical skills required to estimate, having senior non-development
+roles dictating estimates is that they are at risk of non-development
+biases such as idealised project timelines and goals which may not be
+achievable.</p>
+<div class="section level3">
+<h3 id="tasks">Tasks<a class="anchor" aria-label="anchor" href="#tasks"></a>
+</h3>
+<p>Requirements, particularly non-functional requirements, rarely map
+directly onto actual distinct work items, or <strong>tasks</strong>,
+that need to be done. For a functional requirement, when all of the
+tasks that compose it are done, it <em>should</em> be complete. There is
+some difference in terminology found in the Agile world for these
+things: some teams would consider a “task” to simply be a more
+fine-grained requirement, other teams would refer to top-level
+requirements as <strong>epics</strong>.</p>
+<p>For example, a requirement to have a login page on a website might be
+split into smaller tasks to write the backend login web API, and a task
+to write the frontend UI (and possibly still further tasks to set up the
+database tables and infrastructure to securely store and retrieve login
+information); and some of these work items may intersect with
+non-functional requirements (such as security requirements).</p>
+<p>There are some things that should <em>never</em> be split out into a
+separate task. For example tests of changes made to the code as part of
+the task are <em>always</em> part of the task, as is ensuring code
+quality, and writing/updating relevant developer documentation regarding
+the task.</p>
+<p>It is these smaller tasks that form the basis of estimation.</p>
+</div>
+<div class="section level3">
+<h3 id="point-estimation-and-velocity">Point Estimation and Velocity<a class="anchor" aria-label="anchor" href="#point-estimation-and-velocity"></a>
+</h3>
+<p>A common method used in Agile software development to simply assign
+points to tasks depending on how “big” they seem. When thinking of
+effort, these numbers should scale linearly: a 5-point task should be
+roughly 5 times bigger than a 1-point task. These points are abstract:
+they shouldn’t have an explicit time estimate associated with them
+(although that may implicitly emerge over the course of multiple
+sprints). By not having a time estimate associated with them, it avoids
+the pressure of committing to a particular time target for a task.
+Different teams may have different ideas of what they consider a
+“1-point” issue or a “5-point” issue.</p>
+<p>When considering effort, you should include not just the effort to
+write the code, but also the time to write tests, review the code and
+fix defects, write documentation, and other parts of the task. Something
+which is a 10 minute bugfix to a single line of code likely still needs
+regression tests, time for continuous integration to run, code review to
+be performed, change-logs to be updated, and so-on. Even the most
+trivial of things is likely to take at least an hour of developer
+working time, and usually at least a couple of hours of elapsed
+“wall-clock” time.</p>
+<p>When assigning points, a commonly used scale follows a Fibonacci
+sequence. This prevents small-scale worrying about “is this an 8 or a 9”
+by presenting a more limited selection of choices:</p>
+<table class="table">
+<thead><tr>
+<th>Points</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Very quick and easy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Small effort</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Medium effort</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Large effort</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Very large</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Extremely large/unclear</td>
+</tr>
+</tbody>
+</table>
+<p>Each developer in the team looks over the issues under consideration
+for the sprint, and assigns a number based on their understanding of the
+complexity and time it would likely take. The team then compares their
+estimates, discusses any differences in their estimates, and comes to a
+consensus on the point value of the task.</p>
+<p>If a task is considered large (maybe 8 or 13 points or larger, it
+depends on the team) then it’s likely to big or too vaguely specified to
+be a good task for a single sprint, and so it should be broken up into
+smaller sub-tasks, and those tasks estimated.</p>
+<p>Once a requirement is broken into tasks, the tasks estimated, the
+estimates agreed-upon, at that point you have an estimate for the total
+effort required for the original requirement.</p>
+<p>Over time this approach gives a number of advantages:</p>
+<ul>
+<li>it allows a team to develop a consistent sense of the effort
+required for a task</li>
+<li>over time the team will likely consistently complete tasks totalling
+a certain amount of points during a sprint, and that is likely to be
+consistent over time.</li>
+</ul>
+<p>That total of points is sometimes called the “velocity” of the team,
+and helps with sprint planning. For example, if you know that your team
+can usually completes tasks worth between 30 to 40 total points in a
+sprint, that gives a rough estimate about what might be achieved in a
+future sprint. Sprint velocities should never be used outside of a team
+because what a point represents may vary considerably, and <a href="https://en.wikipedia.org/wiki/Goodhart%27s_law" class="external-link">should never be
+used as an explicit target: they are a measurement, not a goal</a>.</p>
+<p>The velocity also gives a sense of how much effort a “point” is in
+terms of time taken, but even that may vary as a team becomes more
+familiar with the problems they are trying to solve and the codebase
+they are working on. Other factors can increase velocity without
+changing point estimates, for example a refactor which makes it easier
+to add new features can dramatically increase velocity, which will
+change how much time a ‘point’ represents.</p>
+<p>Point estimates can also be used as a constraint on effort,
+particularly for tasks with a lot of uncertainty in what they involve.
+If the effort to complete a task seems to be growing outside the size of
+the estimate (for example a 2-point starting to look more like a 3-point
+or more), development can be paused and the estimate revisited based on
+what has been learned so far, and possibly even deferred if other tasks
+have higher priority.</p>
+<div id="why-is-it-so-difficult-to-estimate" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-is-it-so-difficult-to-estimate" class="callout-inner">
+<h3 class="callout-title">Why is it so Difficult to Estimate?</h3>
+<div class="callout-content">
+<p>Estimation is a very valuable skill to learn, and one that is often
+difficult. Lack of experience in estimation can play a part, but a
+number of psychological causes can also contribute. One of these is <a href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" class="external-link">Dunning-Kruger</a>,
+a type of cognitive bias in which people tend to overestimate their
+abilities, whilst in opposition to this is <a href="https://en.wikipedia.org/wiki/Impostor_syndrome" class="external-link">imposter
+syndrome</a>, where due to a lack of confidence people underestimate
+their abilities.</p>
+<p>Another reason it is difficult is that you make correctly estimate
+the time taken to do the “core” of the task (say, to fix a bug) but not
+the time to do the associated work to truly finish the task (such as
+building the software, testing, review, and documentation). These can
+take more time than the main task in some cases.</p>
+<p>The key message here is to be honest about what you can do, and find
+out as much information that is reasonably appropriate before arriving
+at an estimate, and don’t worry too much if it turns out to be wrong: it
+is, after all, an <em>estimate</em>.</p>
+<p>More experience in estimation will also help to reduce these effects.
+So keep estimating!</p>
+</div>
+</div>
+</div>
+<div id="general-tips-for-a-successful-estimation-session" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="general-tips-for-a-successful-estimation-session" class="callout-inner">
+<h3 class="callout-title">General Tips for a Successful Estimation
+Session</h3>
+<div class="callout-content">
+<ul>
+<li>Avoid mapping sizes to exact hours/days</li>
+<li>Focus on relative sizing between stories</li>
+<li>Discuss outliers - why does someone see it as a 1 when others see
+5?</li>
+<li>Use the discussion to uncover unknowns or assumptions about the
+requirements, and clarify them in the product backlog</li>
+</ul>
+</div>
+</div>
+</div>
+<p>The exercise of taking a requirement, splitting it into tasks, and
+estimating the effort does not need to be performed immediately. It is
+only at the point where work is actively being considered on it that you
+need to know what the tasks are and the effort required. Particularly
+early on in a project it may be difficult to know what the tasks are for
+a requirement.</p>
+<p>To an extent, the <em>process</em> of deciding estimates is more
+important than the actual result of estimation. Creating estimates
+forces the team to consider the detail of what will be required to
+fulfil a requirement, beyond just coming up with a number. For example,
+when coming up with an estimate it may become clear there are unrealised
+dependencies between tasks, or some requirements are not readily
+estimable due to being too complex or too widely scoped, and require
+further decomposition into multiple smaller requirements to estimate
+properly. It may also become clear that some requirements may not be
+achievable at all within the timeframe of the project!</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="prioritization">Prioritization<a class="anchor" aria-label="anchor" href="#prioritization"></a>
+</h2>
+<p>Now we have our estimates we can decide how important each
+requirement is to the success of the project. This should be decided by
+the project stakeholders; those - or their representatives - who have a
+stake in the success of the project and are either directly affected or
+affected by the project, e.g. clients, end-users, collaborators,
+etc.</p>
+<p>To prioritise these requirements we can use a method called
+<strong>MoSCoW</strong>, a way to reach a common understanding with
+stakeholders on the importance of successfully delivering each
+requirement for a timebox. MoSCoW is an acronym that stands for
+<strong>Must have</strong>, <strong>Should have</strong>, <strong>Could
+have</strong>, and <strong>Won’t have</strong>. Each requirement is
+discussed by the stakeholder group and falls into one of these
+categories:</p>
+<ul>
+<li>
+<em>Must Have</em> (MH) - these requirements are critical to the
+current timebox for it to succeed. Even the inability to deliver just
+one of these would cause the project to be considered a failure.</li>
+<li>
+<em>Should Have</em> (SH) - these are important requirements but not
+<em>necessary</em> for delivery in the timebox. They may be as
+<em>important</em> as Must Haves, but there may be other ways to achieve
+them or perhaps they can be held back for a future development
+timebox.</li>
+<li>
+<em>Could Have</em> (CH) - these are desirable but not necessary,
+and each of these will be included in this timebox if it can be
+achieved.</li>
+<li>
+<em>Won’t Have</em> (WH) - these are agreed to be out of scope,
+perhaps because they are the least important or not critical for this
+phase of development.</li>
+</ul>
+<p>In typical use, the ratio to aim for of requirements to the MH/SH/CH
+categories is 60%/20%/20%. Importantly, the division is by the
+requirement <em>estimates</em>, not by number of requirements, so 60%
+means 60% of the overall estimated effort for requirements are Must
+Haves.</p>
+<p>Why is this important? Because it gives you a unique degree of
+control of your project for each time period. It awards you 40% of
+flexibility with allocating your effort depending on what’s critical and
+how things progress. This effectively forces a tradeoff between the
+effort available and critical objectives, maintaining a significant
+safety margin. The idea is that as a project progresses, even if it
+becomes clear that you are only able to deliver the Must Haves for a
+particular time period, you have still delivered it
+<em>successfully</em>.</p>
+</div>
+</div>
+<div class="section level1">
+<h1 id="sprints">Sprints<a class="anchor" aria-label="anchor" href="#sprints"></a>
+</h1>
+<p>A “sprint” in Agile is a fixed-length event, usually between one week
+and one month in length. All work towards is contained within
+sprints.</p>
+<p>There are typically four events within a Sprint:</p>
+<ul>
+<li>Sprint Planning Meeting</li>
+<li>Daily Scrum Meeting</li>
+<li>Sprint Review</li>
+<li>Sprint Retrospective</li>
+</ul>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Open Source “Sprints”
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>In the open source world, there is a different notion of a “sprint”
+which is a gathering of developers to work on a project, usually in
+person, and frequently associated with a conference or other gathering.
+This is an opportunity for distributed teams to work together on tasks,
+bring other developers onto the team, and collaborate with other related
+projects who are also attending the sprint.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="sprint-planning">Sprint Planning<a class="anchor" aria-label="anchor" href="#sprint-planning"></a>
+</h2>
+<figure><img src="fig/scrum_planning.png" alt="diagram of events with sprint planning highlighted" class="figure mx-auto d-block"></figure><p>The Sprint Planning Meeting is the kickoff meeting for the Sprint.
+During this meeting the Scrum Team will decide what’s most important,
+how much can realistically get done, and how you’ll make it happen.</p>
+<p>The Product Owner, Scrum Master and Developers all attend the Sprint
+Planning meeting. Other people may also be invited to attend to provide
+advice.</p>
+<p>Sprint Planning needs to answer three questions:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Why is this Sprint valuable?</strong>
+<ul>
+<li>The Product Owner explains how this Sprint will add value. For
+example, what improvements or new features will benefit the users.</li>
+<li>Based on this, the Scrum Team collaboratively decides on the Sprint
+Goal, which should be a single, unifying goal for the Sprint.</li>
+<li>The Sprint Goal must be finalised before the end of the Sprint
+Planning Meeting.</li>
+</ul>
+</li>
+<li>
+<strong>What can be Done this Sprint?</strong>
+<ul>
+<li>Next, the Developers work with the Product Owner to select the
+highest-priority Product Backlog items that they feel confident they can
+complete. This might involve refining or breaking down the items to make
+sure the whole Scrum Team knows what’s involved.</li>
+<li>Estimating the amount of work that will fit into one Sprint can be
+difficult but basing the estimates on past performance, upcoming
+capacity and the Definition of Done can improve the accuracy of
+estimates.</li>
+</ul>
+</li>
+<li>
+<strong>How will the chosen work get done?</strong>
+<ul>
+<li>For each item selected from the Product Backlog, the Developers plan
+the specific tasks needed to turn ideas into a working Increment.</li>
+<li>Often, Developers will break large items into smaller, more
+manageable chunks that will take one day or less.</li>
+<li>The Developers decide how to do the work. The Developers are in
+charge of this, no one else can tell them how to build the
+solution.</li>
+</ul>
+</li>
+</ol>
+<p>The output from your Sprint Planning Meeting should be your Sprint
+Backlog including:</p>
+<ul>
+<li>A Sprint Goal</li>
+<li>The subset of items from the Product Backlog that you will work on
+this Sprint</li>
+<li>A plan for delivering the Increment by the end of the Sprint</li>
+</ul>
+<p>A Sprint Planning Meeting should be an absolute maximum of eight
+hours for a one month Sprint in a large and complex project, and should
+be shorter for shorter Sprints. Time-boxing the meeting keeps the
+discussion focussed and allows the Scrum Team to start making delivering
+value fast.</p>
+<p>For a typical research project, an hour should be more than enough
+time.</p>
+</div>
+<div class="section level2">
+<h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
+</h2>
+</div>
+<div class="section level2">
+<h2 id="daily-stand-up">Daily “Stand-up”<a class="anchor" aria-label="anchor" href="#daily-stand-up"></a>
+</h2>
+<figure><img src="fig/scrum_daily_meeting.png" alt="diagram of scrum events and artifacts with daily meeting highlighted" class="figure mx-auto d-block"></figure><p>The Scrum Team meet each day to inspect progress toward the Sprint
+Goal, adapt the Sprint Backlog and adjust plans for upcoming work.</p>
+<p>The Daily Scrum Meeting helps the Scrum Team:</p>
+<ul>
+<li>See progress toward the Sprint Goal</li>
+<li>Surface and solve problems faster</li>
+<li>Make quick decisions</li>
+<li>Reduce the need for additional meetings</li>
+<li>Keep momentum going with clear next steps</li>
+</ul>
+<p>This meeting should usually last no longer than 15 minutes and is
+usually held in the same time and place every working day of the Sprint.
+The Daily Scrum can take any structure and use any techniques as long as
+it focuses on progress toward the Sprint Goal and produces a plan for
+the next day of work.</p>
+<p>Usually each developer would cover:</p>
+<ul>
+<li>What you did yesterday</li>
+<li>What you plan to do today</li>
+<li>Anything that’s blocking you</li>
+</ul>
+<p>During a Daily Scrum Meeting, focus on exchanging information with
+others in the group not just talking about what you’ve been doing.</p>
+<p>The Daily Scrum Meeting isn’t the only time that Developers can
+discuss and adjust their plans. Developers can also meet throughout the
+day to re-adjust plans or to have more detailed discussions.</p>
+</div>
+<div class="section level2">
+<h2 id="sprint-review">Sprint Review<a class="anchor" aria-label="anchor" href="#sprint-review"></a>
+</h2>
+<figure><img src="fig/scrum_review.png" alt="diagram of scrum events and artifacts with sprint review highlighted" class="figure mx-auto d-block"></figure><p>A Sprint Review takes place at the end of each sprint and brings the
+Scrum Team together with clients and other stakeholders. It is an
+opportunity for everyone involved to see what has been accomplished
+during the sprint and to reflect on progress together.</p>
+<p>During the review, the Scrum Team shares the work they have
+completed, often by demonstrating new or updated features. Stakeholders
+are encouraged to ask questions, give feedback, and discuss priorities.
+This conversation helps the team decide what to focus on next and
+highlights any changes in requirements or circumstances that could
+affect future work. The Product Backlog is then updated to reflect these
+new insights.</p>
+<p>A Sprint Review should be a collaborative working session rather than
+just a presentation.</p>
+<p>The Sprint Review would be timeboxed to four hours for a one month
+Sprint but will be much shorter, only 30 minutes, for our mini
+Sprint.</p>
+<div class="section level3">
+<h3 id="strategies-for-communicating-effectively-with-a-client-during-a-sprint-review">Strategies for Communicating Effectively with a Client during a
+Sprint Review<a class="anchor" aria-label="anchor" href="#strategies-for-communicating-effectively-with-a-client-during-a-sprint-review"></a>
+</h3>
+<ul>
+<li>
+<strong>Focus on demonstrating real work</strong>. Show working
+features rather than describing them in abstract terms. This helps
+clients understand progress clearly and gives them confidence in what
+has been achieved.</li>
+<li>
+<strong>Explain decisions and context</strong>. Briefly explain why
+certain approaches were taken, especially if there were constraints or
+trade-offs. This helps stakeholders understand the reasoning behind the
+work and reduces misunderstandings.</li>
+<li>
+<strong>Listen actively to feedback</strong>. Pay close attention to
+what clients say, and avoid interrupting or dismissing their comments.
+Ask clarifying questions to ensure you understand their perspective.
+This shows respect and helps avoid incorrect assumptions.</li>
+<li>
+<strong>Avoid becoming defensive</strong>. Feedback is intended to
+improve the product, not criticise individuals. Respond calmly and
+professionally, even if the feedback is unexpected.</li>
+<li>
+<strong>Be honest about progress and limitations</strong>. Be clear
+about what is complete, what is still in progress, and any challenges
+the team has encountered. Transparency builds trust and helps
+stakeholders make informed decisions.</li>
+<li>
+<strong>Confirm shared understanding</strong>. Summarise key points
+and agreed changes at the end of the discussion. This ensures everyone
+has the same expectations and helps you update the Product Backlog
+accurately after the meeting.</li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2 id="managing-change">Managing Change<a class="anchor" aria-label="anchor" href="#managing-change"></a>
+</h2>
+<p>Feedback from stakeholders during the Sprint Review may highlight new
+requirements, changes to existing features, or changes to the relative
+importance of planned work. Changes in requirements are normal and but
+can be difficult to manage well.</p>
+<p>There are some strategies you can use to manage change in a way that
+keeps the project focused and sustainable:</p>
+<ul>
+<li>
+<strong>Record changes clearly</strong>. All requested changes
+should be documented in the Product Backlog. This ensures that nothing
+is forgotten and allows the team to review and prioritise changes in an
+organised way.</li>
+<li>
+<strong>Prioritise changes based on value</strong>. Not all changes
+are equally important. The Product Owner should work with stakeholders
+to decide which changes will deliver the most value. This helps the team
+focus their effort where it will have the greatest impact.</li>
+<li>
+<strong>Break changes into manageable chunks</strong>. Large or
+unclear changes should be divided into smaller backlog items. This makes
+them easier to understand, estimate, and implement, and reduces the risk
+of misunderstandings.</li>
+<li>
+<strong>Discuss and clarify requirements</strong>. Take time to ask
+questions and confirm what stakeholders need. This reduces the risk of
+rework and ensures the team is solving the right problem. Keep
+stakeholders informed about how changes affect timelines, priorities,
+and scope.</li>
+</ul>
+<div id="communicating-effectively-about-change" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="communicating-effectively-about-change" class="callout-inner">
+<h3 class="callout-title">Communicating Effectively About Change</h3>
+<div class="callout-content">
+<p>When you’ve invested a lot of time and effort in a piece of work, it
+can feel really frustrating when the product requirements change and
+your work needs to be changed or removed from the product. It’s natural
+to feel this way, but it is equally important to remain professional and
+open to feedback. Try to reframe the change as part of an ongoing
+improvement process rather than as something that makes your previous
+work a waste of time!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="sprint-retrospective">Sprint Retrospective<a class="anchor" aria-label="anchor" href="#sprint-retrospective"></a>
+</h2>
+<figure><img src="fig/scrum_retrospective.png" alt="diagram of scrum events and artifacts with sprint retrospective highlighted" class="figure mx-auto d-block"></figure><p>The Sprint Retrospective is a reflective session held by the Scrum
+Team alone, immediately after the Sprint Review. Its purpose is to
+inspect how the Sprint went, discuss what worked well, identify areas
+for improvement, and decide on actionable steps to increase team
+effectiveness in future sprints.</p>
+<p>In the Sprint Retrospective the team might reflect on questions such
+as:</p>
+<ul>
+<li>What went well during this Sprint?</li>
+<li>What challenges or obstacles did the Scrum Team face?</li>
+<li>How did your prioritisation strategy work?</li>
+<li>Were effort estimates accurate? And if not, why?</li>
+</ul>
+<p>The answers to these questions would be documented and used to
+identify actionable improvements for the next Sprint.</p>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Burndown Charts
+  </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>A burndown chart is a graph that shows the amount of work left to
+complete against the time remaining for the project (or for the sprint).
+The estimated effort that tasks will take is on the y axis and time is
+on the x axis. Burndown charts are often used in agile processes to
+track effort and estimate completion times.</p>
+<p>There are two lines on the chart: the <strong>‘ideal work remaining
+line’</strong> and the <strong>‘actual work remaining line’</strong>. If
+the actual work line is below the ideal work line, there is less work
+remaining than was originally predicted and the project is ahead of
+schedule. Whereas, if the actual work line is above the ideal work line,
+there is more work remaining than was originally predicted and the
+project is behind schedule.</p>
+<p>Burndown charts within a sprint rarely follow the ideal line, because
+effort naturally is focused on development work and it is only when that
+is complete that issues can be reviews and tasks completed—so fewer
+tasks are completed at the start of the sprint—and towards the end of
+the sprint effort tends to be focused on reviewing code rather than new
+development—so many tasks get closed towards the end of the sprint.</p>
+<figure><img src="fig/Burn_down_chart.png" alt="A burn down chart showing the ideal work line and the actual work line and the start/end points for a completed iteration." class="figure mx-auto d-block"><div class="figcaption">I8abug, CC BY-SA 3.0 via Wikimedia Commons</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="repeat">Repeat<a class="anchor" aria-label="anchor" href="#repeat"></a>
+</h2>
+<p>Once a sprint is completed, the process starts again from the
+beginning with the next sprint.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div>
+</div></section>
 </div>
     </main>
 </div>
@@ -520,9 +1700,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/aio.html",
-  "dateCreated": "2026-08-04",
-  "dateModified": "2026-08-25",
-  "datePublished": "2026-08-25"
+  "dateCreated": "2026-08-26",
+  "dateModified": "2026-08-26",
+  "datePublished": "2026-08-26"
 }
 
   </script><script>
