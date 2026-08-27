@@ -904,8 +904,6 @@ order</li>
 each stage</li>
 <li>In iterative development, a large application is built in smaller,
 manageable parts called iterations.</li>
-<li>Boehm’s Spiral is an iterative, risk-driven approach to software
-development</li>
 <li>Agile software development is any iterative method that follows a
 set of Agile principles: Individuals and interactions over processes and
 tools; Working software over comprehensive documentation; Customer
@@ -925,7 +923,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-11-agile-workflow"><p>Content from <a href="11-agile-workflow.html">The Agile Software Development Workflow</a></p>
 <hr>
-<p>Last updated on 2026-08-26 |
+<p>Last updated on 2026-08-27 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/11-agile-workflow.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -942,7 +940,12 @@ any links that you are not going to use.
 <ul>
 <li>How do you identify tasks that need to be completed as part of the
 software development process?</li>
+<li>What is a non-functional requirement?</li>
+<li>How do I describe and ensure how desired features will provide value
+to the end user?</li>
+<li>How should I capture and manage requirements for change?</li>
 <li>What methods can you use to estimate how long a task will take?</li>
+<li>How should I prioritise requirements?</li>
 <li>What activities are involved in a typical Agile sprint?</li>
 </ul>
 </div>
@@ -954,7 +957,15 @@ software development process?</li>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Learn how to write user stories.</li>
+<li>Highlight the characteristics and differences between functional and
+non-functional requirements</li>
+<li>Describe the purpose and composition of the product backlog</li>
+<li>Describe what makes a good product requirement</li>
 <li>Estimate the effort required for a task.</li>
+<li>Create a GitHub Project Board to manage issues</li>
+<li>Add backlog items to the Project Board</li>
+<li>Apply MoSCoW internally to initially prioritise items in a product
+backlog</li>
 <li>Be able to participate effectively in an Agile sprint.</li>
 </ul>
 </div>
@@ -1047,7 +1058,7 @@ the software and weights as an open source project.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>There’s no right or wrong answers, but here are some examples.</p>
 <ul>
@@ -1200,7 +1211,7 @@ Wikipedia</a>.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Mars Climate Orbiter </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>The <a href="https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" class="external-link">Mars
 Climate Orbiter</a> was a 1998 NASA mission to study the climate and
@@ -1261,7 +1272,7 @@ that may be implicit in the</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>There’s no right or wrong answers, but here are some examples.</p>
 <p>Consider two possible user stories and how they impact
@@ -1354,7 +1365,7 @@ the task.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Time-boxing </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Time-boxing is the practice of assigning a limit to the amount of
 time to spend on a task. This can be done at the small-scale, such as
@@ -1479,14 +1490,13 @@ the estimate (for example a 2-point starting to look more like a 3-point
 or more), development can be paused and the estimate revisited based on
 what has been learned so far, and possibly even deferred if other tasks
 have higher priority.</p>
-<div id="why-is-it-so-difficult-to-estimate" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="why-is-it-so-difficult-to-estimate" class="callout-inner">
-<h3 class="callout-title">Why is it so Difficult to Estimate?</h3>
-<div class="callout-content">
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Why is it so Difficult to Estimate? </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div class="accordion-body">
 <p>Estimation is a very valuable skill to learn, and one that is often
 difficult. Lack of experience in estimation can play a part, but a
 number of psychological causes can also contribute. One of these is <a href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" class="external-link">Dunning-Kruger</a>,
@@ -1505,6 +1515,7 @@ at an estimate, and don’t worry too much if it turns out to be wrong: it
 is, after all, an <em>estimate</em>.</p>
 <p>More experience in estimation will also help to reduce these effects.
 So keep estimating!</p>
+</div>
 </div>
 </div>
 </div>
@@ -1544,6 +1555,90 @@ estimable due to being too complex or too widely scoped, and require
 further decomposition into multiple smaller requirements to estimate
 properly. It may also become clear that some requirements may not be
 achievable at all within the timeframe of the project!</p>
+<div id="challenge3" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>You are working on a research team and on a novel image
+classification model. You want software which can train the model, which
+can perform inference, and you want to be able to demonstrate the model
+at trade shows, conferences and outreach activities. You want to publish
+the software and weights as an open source project.</p>
+<p>You have a user story:</p>
+<ul>
+<li>As a <em>researcher</em> I want <em>to train the model</em> so that
+<em>I can validate my ideas</em>.</li>
+</ul>
+<p>And you have created system requirements for this user story, each of
+which is small enough to be a single task:</p>
+<ul>
+<li>the software must be able to load a data set for training and
+inference</li>
+<li>the software must be able to create an untrained model of the
+experimental architecture</li>
+<li>the software must be able to train the model</li>
+<li>the software must be able to perform inference on a trained
+model</li>
+<li>the software must be able to report progress in terms of both loss
+and user-specified metrics</li>
+</ul>
+<p>The software should include tests and API documentation, so make sure
+you consider the time to complete those parts of the task as well.</p>
+<p>Assign points for the amount of effort you think each of these tasks
+will take <em>you</em> to perform.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>Again, there are no right or wrong answers, in part because different
+people will have different things that they find easy or hard.</p>
+<p>Of these,the tasks:</p>
+<ul>
+<li>the software must be able to load a data set for training and
+inference</li>
+<li>the software must be able to create an untrained model of the
+experimental architecture</li>
+<li>the software must be able to report progress in terms of both loss
+and user-specified metrics</li>
+</ul>
+<p>Are fairly straight-forward and probably of similar size, but not
+completely simple. You might assign these 2 or 3 points</p>
+<p>The task:</p>
+<ul>
+<li>the software must be able to perform inference on a trained
+model</li>
+</ul>
+<p>is more complex, because it requires some care for correctness, it
+may require access to HPC facilities, and testing is more difficult,
+since it is unlikely that inference results will be able to be
+controlled precisely. You might assign this 3 or 5 points, depending on
+how you ranked the previous tasks.</p>
+<p>Finally:</p>
+<ul>
+<li>the software must be able to train the model</li>
+</ul>
+<p>is very complex: it requires deep care for correctness, is likely to
+involve working with HPC, is difficult to test. But more importantly,
+the iteration cycle is slow: to get feedback on whether a change to your
+code works, you may need to upload it to an HPC cluster and run several
+epochs of training which could take 10s of minutes to hours. You might
+assign this 5 or 8 points (or even more if the model is complex and
+difficult to work with) depending on your ranking of the other
+tasks.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section level2">
@@ -1612,12 +1707,12 @@ contained within sprints.</p>
 <li>Sprint Review</li>
 <li>Sprint Retrospective</li>
 </ul>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Open Source “Sprints” </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Open Source “Sprints” </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>In the open source world, there is a different notion of a “sprint”
 which is a gathering of developers to work on a project, usually in
@@ -1852,12 +1947,12 @@ as:</p>
 </ul>
 <p>The answers to these questions would be documented and used to
 identify actionable improvements for the next Sprint.</p>
-<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
-  <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Burndown Charts </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+  <h3 class="accordion-header" id="headingSpoiler5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Burndown Charts </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <p>A burndown chart is a graph that shows the amount of work left to
 complete against the time remaining for the project (or for the sprint).
@@ -1903,6 +1998,18 @@ products, where there are always new features to add, changes to
 underlying technologies that need to be dealt with, and constant
 exposure to usage and the issues that arise from that.</li>
 </ul>
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<ul>
+<li><a href="https://scrumguides.org/scrum-guide.html" class="external-link">Scrum
+Guide</a></li>
+<li><a href="https://en.wikipedia.org/wiki/British_Post_Office_scandal" class="external-link">British
+Post Office Scandal Wikipedia</a></li>
+<li><a href="https://www.scrum.org/resources/blog/5-reasons-leading-scrum-team-ineffectiveness" class="external-link">5
+Reasons Leading to Scrum Team Ineffectiveness</a></li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1910,7 +2017,37 @@ exposure to usage and the issues that arise from that.</li>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-
+<ul>
+<li>User Stories help to understand project needs from the perspective
+of the client</li>
+<li>User Stories follow the format
+<code>As a [type of user], I want [an action] so that [benefit]</code>
+</li>
+<li>Clear and well understood requirements are fundamental to a
+successful project</li>
+<li>Evidence that most project errors are introduced during the handling
+of requirements</li>
+<li>Requirements will change over time, and we need to allow and manage
+for that</li>
+<li>Requirements are more than just features: non-functional
+requirements capture the environment and how and in what way the
+software should operate and be provided</li>
+<li>A product backlog is a prioritised list of desired product
+functionality owned by the product owner (typically the client)</li>
+<li>GitHub Projects provide project boards to organise issues and
+visualise the status of a project in terms of its requirements</li>
+<li>Kanban boards consists of columns (which represent statuses) and
+cards (which represent tasks), which are moveable between columns</li>
+<li>GitHub Project Boards are owned by the creating user or
+organisation, and not any particular repository</li>
+<li>GitHub Boards can contain either board-specific cards, or issues
+imported from GitHub repositories</li>
+<li>Estimation is a foundation for prioritisation</li>
+<li>MoSCoW prioritisation classifies requirements either as Must Have
+(MH), Should Have (SH), Could Have (CH) or Won’t Have (WH)</li>
+<li>Using a 60%/20%/20% effort ratio of MH/SH/CH ensures a 40% safety
+margin of effort for a project</li>
+</ul>
 </div>
 </div>
 </div>
