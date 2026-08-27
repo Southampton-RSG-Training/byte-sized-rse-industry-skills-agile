@@ -328,8 +328,8 @@ Which model might you choose for the following software projects:
 -   The Waterfall model follows the stages in a set, sequential order
 -   The V-Model emphasises the importance of testing and validation at each stage
 -   In iterative development, a large application is built in smaller, manageable parts called iterations.
--   Boehm’s Spiral is an iterative, risk-driven approach to software development
 -   Agile software development is any iterative method that follows a set of Agile principles: Individuals and interactions over processes and tools; Working software over comprehensive documentation; Customer collaboration over contract negotiation; Responding to change over following a plan.
 -   Any model can be used for any software development project but some may suit particular types of projects better than others
 -   Software development is concerned with delivering a project whereas project management will also cover the wider project aspects.
+
 :::

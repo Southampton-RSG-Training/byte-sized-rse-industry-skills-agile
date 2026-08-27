@@ -5,14 +5,26 @@ exercises: 0
 ---
 
 ::: questions
+
 - How do you identify tasks that need to be completed as part of the software development process?
+- What is a non-functional requirement?
+- How do I describe and ensure how desired features will provide value to the end user?
+- How should I capture and manage requirements for change?
 - What methods can you use to estimate how long a task will take?
+- How should I prioritise requirements?
 - What activities are involved in a typical Agile sprint?
+
 :::
 
 ::: objectives
 - Learn how to write user stories.
+- Highlight the characteristics and differences between functional and non-functional requirements
+- Describe the purpose and composition of the product backlog
+- Describe what makes a good product requirement
 - Estimate the effort required for a task.
+- Create a GitHub Project Board to manage issues
+- Add backlog items to the Project Board
+- Apply MoSCoW internally to initially prioritise items in a product backlog
 - Be able to participate effectively in an Agile sprint.
 :::
 
@@ -255,7 +267,7 @@ The velocity also gives a sense of how much effort a "point" is in terms of time
 
 Point estimates can also be used as a constraint on effort, particularly for tasks with a lot of uncertainty in what they involve.  If the effort to complete a task seems to be growing outside the size of the estimate (for example a 2-point starting to look more like a 3-point or more), development can be paused and the estimate revisited based on what has been learned so far, and possibly even deferred if other tasks have higher priority.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+:::  spoiler
 
 ### Why is it so Difficult to Estimate?
 
@@ -267,9 +279,9 @@ The key message here is to be honest about what you can do, and find out as much
 
 More experience in estimation will also help to reduce these effects. So keep estimating!
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::
 
-:::::::::::::::::::::::::::::::::::::::: callout
+::: callout
 
 ## General Tips for a Successful Estimation Session
 
@@ -278,11 +290,59 @@ More experience in estimation will also help to reduce these effects. So keep es
 - Discuss outliers - why does someone see it as a 1 when others see 5?
 - Use the discussion to uncover unknowns or assumptions about the requirements, and clarify them in the product backlog
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::
 
 The exercise of taking a requirement, splitting it into tasks, and estimating the effort does not need to be performed immediately. It is only at the point where work is actively being considered on it that you need to know what the tasks are and the effort required. Particularly early on in a project it may be difficult to know what the tasks are for a requirement.
 
 To an extent, the *process* of deciding estimates is more important than the actual result of estimation. Creating estimates forces the team to consider the detail of what will be required to fulfil a requirement, beyond just coming up with a number. For example, when coming up with an estimate it may become clear there are unrealised dependencies between tasks, or some requirements are not readily estimable due to being too complex or too widely scoped, and require further decomposition into multiple smaller requirements to estimate properly. It may also become clear that some requirements may not be achievable at all within the timeframe of the project!
+
+::: challenge
+
+You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
+
+You have a user story:
+
+- As a *researcher* I want *to train the model* so that *I can validate my ideas*.
+
+And you have created system requirements for this user story, each of which is small enough to be a single task:
+
+- the software must be able to load a data set for training and inference
+- the software must be able to create an untrained model of the experimental architecture
+- the software must be able to train the model
+- the software must be able to perform inference on a trained model
+- the software must be able to report progress in terms of both loss and user-specified metrics
+
+The software should include tests and API documentation, so make sure you consider the time to complete those parts of the task as well.
+
+Assign points for the amount of effort you think each of these tasks will take *you* to perform.
+
+::: solution
+
+Again, there are no right or wrong answers, in part because different people will have different things that they find easy or hard.
+
+Of these,the tasks:
+
+- the software must be able to load a data set for training and inference
+- the software must be able to create an untrained model of the experimental architecture
+- the software must be able to report progress in terms of both loss and user-specified metrics
+
+Are fairly straight-forward and probably of similar size, but not completely simple. You might assign these 2 or 3 points
+
+The task:
+
+- the software must be able to perform inference on a trained model
+
+is more complex, because it requires some care for correctness, it may require access to HPC facilities, and testing is more difficult, since it is unlikely that inference results will be able to be controlled precisely. You might assign this 3 or 5 points, depending on how you ranked the previous tasks.
+
+Finally:
+
+- the software must be able to train the model
+
+is very complex: it requires deep care for correctness, is likely to involve working with HPC, is difficult to test. But more importantly, the iteration cycle is slow: to get feedback on whether a change to your code works, you may need to upload it to an HPC cluster and run several epochs of training which could take 10s of minutes to hours.  You might assign this 5 or 8 points (or even more if the model is complex and difficult to work with) depending on your ranking of the other tasks.
+
+:::
+
+:::
 
 ## Prioritization
 
@@ -465,6 +525,27 @@ Projects often fall into two modes:
 - building new software, where the development process eventually slows down or completely stops once there are enough features. This is common in research software where the software is complete enough to serve the research process, and finding tends to be limited by grants and time.
 - ongoing development of a software product, where the software is working and being continually refined, bugs fixed, new features added, but there is no final endpoint. This is common in commercial software products, where there are always new features to add, changes to underlying technologies that need to be dealt with, and constant exposure to usage and the issues that arise from that.
 
+## References
+
+-   [Scrum Guide](https://scrumguides.org/scrum-guide.html)
+-   [British Post Office Scandal Wikipedia](https://en.wikipedia.org/wiki/British_Post_Office_scandal)
+-   [5 Reasons Leading to Scrum Team Ineffectiveness](https://www.scrum.org/resources/blog/5-reasons-leading-scrum-team-ineffectiveness)
+
 ::: keypoints
+
+- User Stories help to understand project needs from the perspective of the client
+- User Stories follow the format `As a [type of user], I want [an action] so that [benefit]`
+- Clear and well understood requirements are fundamental to a successful project
+- Evidence that most project errors are introduced during the handling of requirements
+- Requirements will change over time, and we need to allow and manage for that
+- Requirements are more than just features: non-functional requirements capture the environment and how and in what way the software should operate and be provided
+- A product backlog is a prioritised list of desired product functionality owned by the product owner (typically the client)
+- GitHub Projects provide project boards to organise issues and visualise the status of a project in terms of its requirements
+- Kanban boards consists of columns (which represent statuses) and cards (which represent tasks), which are moveable between columns
+- GitHub Project Boards are owned by the creating user or organisation, and not any particular repository
+- GitHub Boards can contain either board-specific cards, or issues imported from GitHub repositories
+- Estimation is a foundation for prioritisation
+- MoSCoW prioritisation classifies requirements either as Must Have (MH), Should Have (SH), Could Have (CH) or Won't Have (WH)
+- Using a 60%/20%/20% effort ratio of MH/SH/CH ensures a 40% safety margin of effort for a project
 
 :::
