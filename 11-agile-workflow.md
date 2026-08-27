@@ -298,6 +298,8 @@ To an extent, the *process* of deciding estimates is more important than the act
 
 ::: challenge
 
+### Estimation Activity
+
 You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
 
 You have a user story:
