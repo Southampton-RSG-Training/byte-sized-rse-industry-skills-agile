@@ -214,37 +214,6 @@ Amazon systematically gathers and acts on customer feedback to continually refin
 This Agile model has driven Amazon's extensive expansion into e-commerce, cloud (AWS), smart devices, and subscription services.
 :::
 
-Advantages of Iterative Development:
-
--   Progress on the software product can initially be faster as less time is spent on the requirements and design stages before starting implementation
--   Iterative approaches allow for continuous feedback, adaptation, and improvement throughout the project's lifecycle.
--   Defects can be found and corrected early, preventing them from affecting later stages.
--   After each iteration, feedback can be gathered from users, allowing for adjustments and improvements to meet their expectations.
-
-Disadvantages of Iterative Development:
-
--   Without fully determined requirements and design, software can become messy or 'hacky' if quality control standards are not maintained
--   Since not all requirements are defined from the start, unforeseen changes may arise during the development process which require revision of the software architecture, costing more time in the long run.
-
-::: spoiler
-
-#### Universal Credit
-
-The [UK's Universal Credit welfare reform project](https://www.computerweekly.com/news/2240185166/Universal-Credit-will-cost-taxpayers-128bn) demonstrates that estimating timings and delivery costs can be challenging when using an Agile delivery method.
-
-The project was initially budgeted at £2.2 billion but is estimated to have cost £15-16 billion.
-
-Originally due to complete by 2017, the project end date is now 2028.
-:::
-
-## Which Model to Choose?
-
-Any model can be used for any software development project. Waterfall and V-Model and more likely to be used when all the requirements are known at the start of the project. Iterative methods are particularly suited to prototyping, where quick development and user feedback help shape early versions of a system, and to research software, where evolving requirements and experimental objectives demand adaptability. However, iterative approaches can be used on any project including those which are large scale and safety critical.
-
-It's also worth noting that, to some extent, linear approaches become iterative in reality, as it is nearly always necessary to return to previous stages throughout the software development process. For example, knowing 100% of the requirements from the start is nearly always impossible. Even if a waterfall approach is applied, changes will most likely be made at each of the stages, requiring revision of an earlier stage.
-
-In this course, we will focus on Agile, as it is currently a commonly used method for software engineering across sectors, and it suits the style of project you will likely work on if you work in industry at a startup or technology firm. There are as many different ways to do Agile software development as there are teams doing Agile software development. We will discuss common Agile practices without adhering to a particular variant or style.
-
 ::: spoiler
 
 ### Scrum
@@ -282,8 +251,63 @@ In Scrum:
 -   Sprint - Fixed-length events of one month or less in which the work gets done.
 :::
 
+Advantages of Iterative Development:
+
+-   Progress on the software product can initially be faster as less time is spent on the requirements and design stages before starting implementation
+-   Iterative approaches allow for continuous feedback, adaptation, and improvement throughout the project's lifecycle.
+-   Defects can be found and corrected early, preventing them from affecting later stages.
+-   After each iteration, feedback can be gathered from users, allowing for adjustments and improvements to meet their expectations.
+
+::: spoiler
+
+## Volunteer Open Source
+
+The models for software development discussed in this lesson are typically used in government and industry. Open source software development is usually iterative in nature, but rarely follows Agile development processes unless there is a team who is employed to develop the software.
+
+There may be process—for example Python and other large projects often have a formal ["Enhancement Proposal"](https://peps.python.org/pep-0001/) system—but for volunteers work is often carried out sporadically, solving particular needs or fixing bugs which impact them.
+
+Despite this seemingly chaotic process, extremely high quality software can be built and maintained over long periods of time.
+
+:::
+
+Disadvantages of Iterative Development:
+
+-   Without fully determined requirements and design, software can become messy or 'hacky' if quality control standards are not maintained
+-   Since not all requirements are defined from the start, unforeseen changes may arise during the development process which require revision of the software architecture, costing more time in the long run.
+
+::: spoiler
+
+#### Universal Credit
+
+The [UK's Universal Credit welfare reform project](https://www.computerweekly.com/news/2240185166/Universal-Credit-will-cost-taxpayers-128bn) demonstrates that estimating timings and delivery costs can be challenging when using an Agile delivery method.
+
+The project was initially budgeted at £2.2 billion but is estimated to have cost £15-16 billion.
+
+Originally due to complete by 2017, the project end date is now 2028.
+:::
+
+## Which Model to Choose?
+
+Any model can be used for any software development project. Waterfall and V-Model and more likely to be used when all the requirements are known at the start of the project. Iterative methods are particularly suited to prototyping, where quick development and user feedback help shape early versions of a system, and to research software, where evolving requirements and experimental objectives demand adaptability. However, iterative approaches can be used on any project including those which are large scale and safety critical.
+
+It's also worth noting that, to some extent, linear approaches become iterative in reality, as it is nearly always necessary to return to previous stages throughout the software development process. For example, knowing 100% of the requirements from the start is nearly always impossible. Even if a waterfall approach is applied, changes will most likely be made at each of the stages, requiring revision of an earlier stage.
+
+In this course, we will focus on Agile, as it is currently a commonly used method for software engineering across sectors, and it suits the style of project you will likely work on if you work in industry at a startup or technology firm. There are as many different ways to do Agile software development as there are teams doing Agile software development. We will discuss common Agile practices without adhering to a particular variant or style.
+
+::: discussion
+
+Which model might you choose for the following software projects:
+
+- Developing a new image classification system with a novel algorithm.
+- Translating an existing codebase to a new language.
+- Creating an interactive website for public outreach for your research area.
+- Writing software to control a Mars rover.
+
+:::
+
 ## References
 
+-   [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month), Fred Brooks
 -   Stages of Software Development from [Python Intermediate Development Carpentries Training](https://carpentries-incubator.github.io/python-intermediate-development/30-section3-intro.html)
 -   [The Scrum Guide](https://scrumguides.org/)
 -   [It's Time to End the Battle Between Waterfall and Agile](https://hbr.org/2023/10/its-time-to-end-the-battle-between-waterfall-and-agile)
