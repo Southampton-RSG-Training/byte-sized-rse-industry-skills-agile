@@ -419,6 +419,60 @@ A Sprint Planning Meeting should be an absolute maximum of eight hours for a one
 
 For a typical research project, an hour should be more than enough time.
 
+::: challenge
+
+## Designing a Board Game: The Solent Voyage
+
+Imagine you have an idea to create a board game 'The Solent Voyage', about a ship that sailed from Southampton in Roman times.
+
+Your vision for the project is:
+
+“Create a complete, balanced, and fun strategy board game that 4 friends can play in under an hour.”
+
+You may not know all the mechanics or artwork details yet, but you know what success looks like: something playable, shareable, and maybe even publishable.
+
+The Product Backlog is your ever-evolving list of features and ideas:
+
+-   Create player roles and abilities
+-   Draft simple turn mechanics for the game
+-   Design custom mechanics for each role's combat, trade, and movement
+-   Write the a comprehensive rulebook
+-   Decide win/lose conditions
+-   Sketch a rough paper game board
+-   Design custom artwork for the board
+-   Print the game board onto high quality material
+-   Create quick example cards
+-   Design and print cards
+-   Build a scoring system
+-   Run a short 20-minute test with two players
+-   Run a full test with four players
+-   Gather feedback from players
+-   Create custom miniatures for each character
+
+
+Some items are critical (like the rules), others are stretch goals (like custom miniatures).
+
+## Group Exercise: Sprint Backlog for the Sail Away
+
+You have a goal for the next sprint: “Test the basic turn system with 2 players using paper placeholders.”
+
+Which items would you select from the backlog for this sprint?
+
+::: solution
+
+Your sprint backlog might include:
+
+-   Draft simple turn mechanics for the game
+-   Create quick example cards
+-   Sketch a rough paper game board
+-   Decide win/lose conditions
+-   Run a short 20-minute test with two players
+-   Gather feedback from players
+
+:::
+
+:::
+
 ## Development
 
 ## Daily "Stand-up"
@@ -512,7 +566,7 @@ A burndown chart is a graph that shows the amount of work left to complete again
 
 There are two lines on the chart: the **'ideal work remaining line'** and the **'actual work remaining line'**. If the actual work line is below the ideal work line, there is less work remaining than was originally predicted and the project is ahead of schedule. Whereas, if the actual work line is above the ideal work line, there is more work remaining than was originally predicted and the project is behind schedule.
 
-Burndown charts within a sprint rarely follow the ideal line, because effort naturally is focused on development work and it is only when that is complete that issues can be reviews and tasks completed—so fewer tasks are completed at the start of the sprint—and towards the end of the sprint effort tends to be focused on reviewing code rather than new development—so many tasks get closed towards the end of the sprint.
+Burndown charts within a sprint rarely follow the ideal line, because effort naturally is initially focused on development work and it is only when that is complete that issues can be reviews and tasks completed—so fewer tasks are completed at the start of the sprint—and towards the end of the sprint effort tends to be focused on reviewing code rather than new development—so many tasks get closed towards the end of the sprint.
 
 ![I8abug, CC BY-SA 3.0 via Wikimedia Commons](fig/Burn_down_chart.png){alt='A burn down chart showing the ideal work line and the actual work line and the start/end points for a completed iteration.'}
 
@@ -521,11 +575,6 @@ Burndown charts within a sprint rarely follow the ideal line, because effort nat
 ## Repeat
 
 Once a sprint is completed, the process starts again from the beginning with the next sprint.
-
-Projects often fall into two modes:
-
-- building new software, where the development process eventually slows down or completely stops once there are enough features. This is common in research software where the software is complete enough to serve the research process, and finding tends to be limited by grants and time.
-- ongoing development of a software product, where the software is working and being continually refined, bugs fixed, new features added, but there is no final endpoint. This is common in commercial software products, where there are always new features to add, changes to underlying technologies that need to be dealt with, and constant exposure to usage and the issues that arise from that.
 
 ## References
 
