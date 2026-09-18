@@ -375,7 +375,7 @@ A "sprint" in Agile is a fixed-length event, usually between one week and one mo
 There are typically four events within a Sprint:
 
 -   Sprint Planning Meeting
--   Daily Scrum Meeting
+-   Daily Stand-up Meeting
 -   Sprint Review
 -   Sprint Retrospective
 
@@ -391,18 +391,17 @@ In the open source world, there is a different notion of a "sprint" which is a g
 
 ![](fig/scrum_planning.png){alt='diagram of events with sprint planning highlighted'}
 
-The Sprint Planning Meeting is the kickoff meeting for the Sprint. During this meeting the Scrum Team will decide what's most important, how much can realistically get done, and how you'll make it happen.
+The Sprint Planning Meeting is the kickoff meeting for the Sprint. During this meeting the development team will decide what's most important, how much can realistically get done, and how you'll make it happen.
 
-The Product Owner, Scrum Master and Developers all attend the Sprint Planning meeting. Other people may also be invited to attend to provide advice.
+The product owner and development team all attend the Sprint Planning meeting. Other people may also be invited to attend to provide advice.
 
 Sprint Planning needs to answer three questions:
 
-1.  **Why is this Sprint valuable?**
-    -   The Product Owner explains how this Sprint will add value. For example, what improvements or new features will benefit the users.
-    -   Based on this, the Scrum Team collaboratively decides on the Sprint Goal, which should be a single, unifying goal for the Sprint.
-    -   The Sprint Goal must be finalised before the end of the Sprint Planning Meeting.
+1.  **What is the focus of this sprint?**
+    -   The Product Owner explains what the priorities are for the project during the next sprint. For example, what improvements or new features will benefit the users.
+    -   Based on this, the Team collaboratively decides on the Sprint Goal, which should be a single, unifying goal for the Sprint.
 2.  **What can be Done this Sprint?**
-    -   Next, the Developers work with the Product Owner to select the highest-priority Product Backlog items that they feel confident they can complete. This might involve refining or breaking down the items to make sure the whole Scrum Team knows what's involved.
+    -   Next, the Developers work with the Product Owner to select the highest-priority Product Backlog items that they feel confident they can complete. This might involve refining or breaking down the items to make sure the whole Team knows what's involved.
     -   Estimating the amount of work that will fit into one Sprint can be difficult but basing the estimates on past performance, upcoming capacity and the Definition of Done can improve the accuracy of estimates.
 3.  **How will the chosen work get done?**
     -   For each item selected from the Product Backlog, the Developers plan the specific tasks needed to turn ideas into a working Increment.
@@ -411,63 +410,52 @@ Sprint Planning needs to answer three questions:
 
 The output from your Sprint Planning Meeting should be your Sprint Backlog including:
 
--   A Sprint Goal
 -   The subset of items from the Product Backlog that you will work on this Sprint
 -   A plan for delivering the Increment by the end of the Sprint
 
-A Sprint Planning Meeting should be an absolute maximum of eight hours for a one month Sprint in a large and complex project, and should be shorter for shorter Sprints. Time-boxing the meeting keeps the discussion focussed and allows the Scrum Team to start making delivering value fast.
+A Sprint Planning Meeting should be an absolute maximum of a day for a one month Sprint in a large and complex project, and should be shorter for shorter Sprints. Time-boxing the meeting keeps the discussion focussed and allows the development team to start making delivering value fast.
 
-For a typical research project, an hour should be more than enough time.
+For a typical research project, an hour should be more than enough time for a sprint planning meeting.
 
 ::: challenge
 
-## Designing a Board Game: The Solent Voyage
+## Build a Novel Image Classification Model
 
-Imagine you have an idea to create a board game 'The Solent Voyage', about a ship that sailed from Southampton in Roman times.
+You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
 
-Your vision for the project is:
+The backlog of tasks might look like the following:
 
-“Create a complete, balanced, and fun strategy board game that 4 friends can play in under an hour.”
+- write a PyTorch model for the classification model
+- write a training loop for the model
+- write code to do inference with the model
+- add support for getting checkpoints of the model while training
+- train the model
+- assemble the training and test data
+- create a data loader for the training and test data
+- evaluate the performance of the model against test data
+- evaluate the performance of the model against other models
+- package the model as an open source project
+- create a demo application that classifies images captured by a web cam
 
-You may not know all the mechanics or artwork details yet, but you know what success looks like: something playable, shareable, and maybe even publishable.
+You already have code for the PyTorch model written from exploratory work.
 
-The Product Backlog is your ever-evolving list of features and ideas:
+## Group Discussion
 
--   Create player roles and abilities
--   Draft simple turn mechanics for the game
--   Design custom mechanics for each role's combat, trade, and movement
--   Write the a comprehensive rulebook
--   Decide win/lose conditions
--   Sketch a rough paper game board
--   Design custom artwork for the board
--   Print the game board onto high quality material
--   Create quick example cards
--   Design and print cards
--   Build a scoring system
--   Run a short 20-minute test with two players
--   Run a full test with four players
--   Gather feedback from players
--   Create custom miniatures for each character
+Your goal for the upcoming sprint is "prepare the model for training".
 
-
-Some items are critical (like the rules), others are stretch goals (like custom miniatures).
-
-## Group Exercise: Sprint Backlog for the Sail Away
-
-You have a goal for the next sprint: “Test the basic turn system with 2 players using paper placeholders.”
-
-Which items would you select from the backlog for this sprint?
+Which items would you select from the backlog?
 
 ::: solution
 
-Your sprint backlog might include:
+You probably want something like (in rough order of priority):
 
--   Draft simple turn mechanics for the game
--   Create quick example cards
--   Sketch a rough paper game board
--   Decide win/lose conditions
--   Run a short 20-minute test with two players
--   Gather feedback from players
+- assemble the training and test data
+- create a data loader for the training and test data
+- write code to do inference with the model
+- write a training loop for the model
+- add support for getting checkpoints of the model while training
+
+Whether or not these fit into the sprint likely depends on the size and experience of your team.
 
 :::
 
@@ -477,11 +465,11 @@ Your sprint backlog might include:
 
 ## Daily "Stand-up"
 
-![](fig/scrum_daily_meeting.png){alt='diagram of scrum events and artifacts with daily meeting highlighted'}
+![](fig/scrum_daily_meeting.png){alt='diagram of events and artifacts with daily meeting highlighted'}
 
-The Scrum Team meet each day to inspect progress toward the Sprint Goal, adapt the Sprint Backlog and adjust plans for upcoming work.
+The team meet each day to inspect progress toward the Sprint Goal, adapt the Sprint Backlog and adjust plans for upcoming work.
 
-The Daily Scrum Meeting helps the Scrum Team:
+The Daily Standup Meeting helps the development team:
 
 -   See progress toward the Sprint Goal
 -   Surface and solve problems faster
@@ -489,7 +477,7 @@ The Daily Scrum Meeting helps the Scrum Team:
 -   Reduce the need for additional meetings
 -   Keep momentum going with clear next steps
 
-This meeting should usually last no longer than 15 minutes and is usually held in the same time and place every working day of the Sprint.  The Daily Scrum can take any structure and use any techniques as long as it focuses on progress toward the Sprint Goal and produces a plan for the next day of work.
+This meeting should usually last no longer than 15 minutes and is usually held in the same time and place every working day of the Sprint.  The Daily Standup can take any structure and use any techniques as long as it focuses on progress toward the Sprint Goal and produces a plan for the next day of work.
 
 Usually each developer would cover:
 
@@ -497,18 +485,18 @@ Usually each developer would cover:
 -   What you plan to do today
 -   Anything that's blocking you
 
-During a Daily Scrum Meeting, focus on exchanging information with others in the group not just talking about what you've been doing.
+During a Daily Standup Meeting, focus on exchanging information with others in the group not just talking about what you've been doing.
 
-The Daily Scrum Meeting isn't the only time that Developers can discuss and adjust their plans.
+The Daily Standup Meeting isn't the only time that Developers can discuss and adjust their plans.
 Developers can also meet throughout the day to re-adjust plans or to have more detailed discussions.
 
 ## Sprint Review
 
-![](fig/scrum_review.png){alt='diagram of scrum events and artifacts with sprint review highlighted'}
+![](fig/scrum_review.png){alt='diagram of events and artifacts with sprint review highlighted'}
 
-A Sprint Review takes place at the end of each sprint and brings the Scrum Team together with clients and other stakeholders. It is an opportunity for everyone involved to see what has been accomplished during the sprint and to reflect on progress together.
+A Sprint Review takes place at the end of each sprint and brings the team together with clients and other stakeholders. It is an opportunity for everyone involved to see what has been accomplished during the sprint and to reflect on progress together.
 
-During the review, the Scrum Team shares the work they have completed, often by demonstrating new or updated features. Stakeholders are encouraged to ask questions, give feedback, and discuss priorities. This conversation helps the team decide what to focus on next and highlights any changes in requirements or circumstances that could affect future work. The Product Backlog is then updated to reflect these new insights.
+During the review, the development team shares the work they have completed, often by demonstrating new or updated features. Stakeholders are encouraged to ask questions, give feedback, and discuss priorities. This conversation helps the team decide what to focus on next and highlights any changes in requirements or circumstances that could affect future work. The Product Backlog is then updated to reflect these new insights.
 
 A Sprint Review should be a collaborative working session rather than just a presentation.
 
@@ -545,14 +533,14 @@ When you've invested a lot of time and effort in a piece of work, it can feel re
 
 ## Sprint Retrospective
 
-![](fig/scrum_retrospective.png){alt='diagram of scrum events and artifacts with sprint retrospective highlighted'}
+![](fig/scrum_retrospective.png){alt='diagram of events and artifacts with sprint retrospective highlighted'}
 
-The Sprint Retrospective is a reflective session held by the Scrum Team alone, immediately after the Sprint Review. Its purpose is to inspect how the Sprint went, discuss what worked well, identify areas for improvement, and decide on actionable steps to increase team effectiveness in future sprints.
+The Sprint Retrospective is a reflective session held by the development team alone, immediately after the Sprint Review. Its purpose is to inspect how the Sprint went, discuss what worked well, identify areas for improvement, and decide on actionable steps to increase team effectiveness in future sprints.
 
 In the Sprint Retrospective the team might reflect on questions such as:
 
 - What went well during this Sprint?
-- What challenges or obstacles did the Scrum Team face?
+- What challenges or obstacles did the development team face?
 - How did your prioritisation strategy work?
 - Were effort estimates accurate? And if not, why?
 
