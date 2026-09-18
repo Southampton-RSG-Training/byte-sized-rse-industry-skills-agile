@@ -76,7 +76,7 @@ As mentioned, note that they are short and to the point, and each encapsulate a 
 
 ### User Story Activity
 
-You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
+You are working on a research team on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
 
 Spend a few minutes to write down some user stories.
 
@@ -163,7 +163,7 @@ A product backlog is owned by the *product owner* (the client), and is dynamic, 
 
 ### Requirements Activity
 
-You are working on a research team and on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
+You are working on a research team on a novel image classification model. You want software which can train the model, which can perform inference, and you want to be able to demonstrate the model at trade shows, conferences and outreach activities. You want to publish the software and weights as an open source project.
 
 Look at some of the user stories from the previous challenge, and think about some requirements. Also consider non-functional requirements that may be implicit in the
 
